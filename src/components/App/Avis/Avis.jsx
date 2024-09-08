@@ -9,8 +9,8 @@ function Avis ({data}) {
     return (
         data.map((avis, index) => (
             <Section id={avis.section} key={index}>
-              <TitreSection titre={avis.titre} />
-              <ParagrapheCenter texte={avis.description} />
+                <TitreSection titre={avis.titre} />
+                <p className="txt-center">{avis.description}</p>
           </Section>
           ))
     )

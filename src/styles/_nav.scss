@@ -109,11 +109,10 @@ nav:not(.sticky) {
     ul.main-nav {
         display: none;
     }
-}
-
-// Qd clic qur le burger
-ul.main-nav.nav-active {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    // Qd clic qur le burger
+    ul.main-nav.nav-active {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }

@@ -10,7 +10,7 @@ function Emplacement({ data}) {
         data.map((emplacement, index)=>(
             <Section id={emplacement.section} key={index}>
                 <TitreSection titre={emplacement.titre} />
-                <ParagrapheCenter texte={emplacement.description} />
+                <p className="txt-center">{emplacement.description}</p>
             </Section>
         ))
     )

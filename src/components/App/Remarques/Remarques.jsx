@@ -9,7 +9,7 @@ function Remarques({ data }) {
     return (
       data.map((remarque, index) => (
         <Section id={remarque.section} key={index}>
-          <TitreSection titre={remarque.titre} />
+          <TitreSection titre={remarque.texteitre} />
           <ParagrapheCenter texte={remarque.description} />
       </Section>
       ))

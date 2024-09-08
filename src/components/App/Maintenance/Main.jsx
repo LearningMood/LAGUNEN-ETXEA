@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import Avis from "../Avis/Avis";
 import Contact from "../Contact/Contact";
 import { SheetDataContext } from "../Context/DataContext";
@@ -15,45 +15,33 @@ import Tarifs from "../Tarifs/Tarifs";
 import Remarques from "../Remarques/Remarques";
 
 function Main() {
-
-    useEffect(() => {
-        const fetchData = async () => {
-          const response = await fetch('/exported-data.json');
-          const data = await response.json();
-          console.log(data);
-        };
-        
-        fetchData();
-      }, []);
-
-    // const { introData, logementData, remarquesData, tarifData, avisData, equipementData, emplacementData, faqData, contactData, loading, error } = useContext(SheetDataContext);
+    const { data, loading, error } = useContext(SheetDataContext);
 
     // Pour le menu
-    // Combine les titres de toutes les sections
-    // const sections = [
-    //     ...logementData,
-    //     ...tarifData,
-    //     ...emplacementData,
-    //     ...faqData, 
-    // ];
+    const sections = [
+        ...data.logement,  // Titre et section de Logement
+        ...data.tarif,     // Titre et section de Tarif
+        ...data.emplacement, // Titre et section de l'emplacement
+        ...data.faq        // Titre et section de FAQ
+      ];
 
-    // if (loading) return <p>Chargement...</p>;
-    // if (error) return <p>{error}</p>;
+    if (loading) return <p>Chargement...</p>;
+    if (error) return <p>{error}</p>;
 
     return (
         <div className="app">
-            {/* <Nav sections={sections}/> */}
+            <Nav sections={sections}/>
             <Header />
-            {/* <Intro data={introData} /> */}
+            <Intro data={data.intro} />
             <Galerie />
-            {/* <Logement data={logementData} />
-            <Remarques data={remarquesData} />
-            <GaleriePictos data={equipementData} />
-            <Tarifs data={tarifData} />
-            <Avis data={avisData} />
-            <Emplacement data={emplacementData} />
-            <Contact data={contactData} />
-            <Questions data={faqData} /> */}
+            <Logement data={data.logement} />
+            <Remarques data={data.remarques} />
+            <GaleriePictos data={data.equipements} />
+            <Tarifs data={data.tarif} />
+            <Avis data={data.avis} />
+            <Emplacement data={data.emplacement} />
+            <Contact data={data.contact} />
+            <Questions data={data.faq} />
             <Footer />
         </div>
     );
