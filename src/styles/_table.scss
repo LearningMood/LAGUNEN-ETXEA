@@ -1,0 +1,17 @@
+@use 'vars' as v;
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+    background-color:rgb(255 250 255 / 63%);
+}
+tr, td, th {
+    border: solid 1px v.$color;
+    padding: 1rem 1rem;
+}
+th {
+    background-color: v.$color;
+    text-transform: uppercase;
+}
+

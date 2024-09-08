@@ -1,0 +1,67 @@
+@use 'vars' as v;
+
+// Pour  les classes flex
+@mixin flex-width($number) {
+    .flex-w#{$number} {
+      flex: $number!important;
+    }
+  }
+  
+  // Génération des classes flex-w1 à flex-w6
+  @for $i from 1 through 6 {
+    @include flex-width($i);
+  }
+
+// Pour les filets
+  @mixin filet($width: 160px, $color: v.$indigo, $height: 1px) {
+
+    &:after {
+      content: "";
+      display: block;
+        width: 80px;
+        height: $height;
+        background-color: v.$indigo;
+        margin: 0 auto;
+        position: relative;
+        top: 20px;
+    }
+
+    @media (min-width: v.breakpoint(md)) {
+    
+    &::before,
+    &::after {
+      content: "";
+        display: block;
+        width: $width;
+        height: $height;
+        background-color: $color;
+        position: relative;
+        top: 20px;
+    }
+
+    &::before {
+      margin-left: 100px;
+    }
+    
+    &::after {
+      position: absolute;
+      right: 0;
+      margin-right: 100px;
+    }
+  }
+  }
+
+  // Pour les couleurs
+  @for $i from 20 through 100 {
+    @if $i % 10 == 0 {
+        // Je définis une amplitude de pourcentage
+      $pourcentage: $i*1%;
+
+      .darker-#{$i} {
+        background-color: darken(v.$color, $pourcentage);
+      }
+      .lighter-#{$i} {
+        background-color: lighten(v.$color, $pourcentage);
+      }
+    }
+  }

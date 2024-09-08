@@ -1,0 +1,14 @@
+@use 'vars' as v;
+@import 'mixins';
+
+footer {
+    background-color: v.$dark;
+    padding: 4rem;
+    color: #fff;
+}
+
+.footer-ressources {
+    background-color: v.$pourpre;
+    padding: 12rem get-space(4);
+    color: v.$indigo;
+}

@@ -1,0 +1,33 @@
+@use 'vars' as v;
+@import 'mixins';
+
+.mosaique {
+    align-items: normal;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    figure.mosaique-img {
+        width: 100%;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        justify-content: center;
+        max-width: 100%;
+        position: relative;
+        border-radius: v.$rounded-mini;
+        overflow: hidden;
+
+        @media (min-width: v.breakpoint(md)) {
+            width: calc(33.33% - 1rem* .66667);
+        }
+
+        img { // WP
+            flex: 1 0 0%;
+            height: 100%;
+            object-fit: cover;
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,10 @@
+@use 'vars' as v;
+section{
+    background-color: rgb(245, 245, 245);
+    padding: 2rem 1rem;
+    
+    @media (min-width: v.breakpoint(md)) {
+        padding: 3rem;
+    }
+
+}

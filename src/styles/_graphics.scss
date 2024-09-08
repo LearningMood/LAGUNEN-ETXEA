@@ -1,0 +1,10 @@
+@use 'vars' as v;
+.picto {
+    padding: 3rem;
+    border: solid grey 1px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}

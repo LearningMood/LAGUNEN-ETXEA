@@ -1,0 +1,37 @@
+@use 'vars' as v;
+
+a {
+    text-decoration: none;
+    color: inherit; 
+}
+
+a.btn-dark {
+    display: inline-block;
+    margin-top: 2rem;
+    margin-left: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: v.$titre-sans;
+    background: v.$darkblue;
+    color: #fff;
+    padding: 10px 10px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    transition: all .3s ease-in;
+    -webkit-transition: all .3s ease-in;
+    -moz-transition: all .3s ease-in;
+    -ms-transition: all .3s ease-in;
+    -o-transition: all .3s ease-in;
+    &:hover
+        {
+        background-color: darken(v.$darkblue, 10%);
+    }
+}
+
+a.btn-dark--alt {
+    background: lighten(v.$darkblue, 20%);
+}

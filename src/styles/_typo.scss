@@ -1,0 +1,5 @@
+@use 'vars' as v;
+@import 'mixins';
+body {
+    font-family: v.$dolly;
+}

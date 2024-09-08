@@ -1,0 +1,28 @@
+@use 'vars' as v;
+@import 'mixins';
+p {
+    color: v.$dark;
+    line-height: 2;
+}
+.txt-center{
+    text-align: center;
+}
+.txt-justify {
+    text-align: justify;
+}
+
+ul.questions {
+    
+    li {
+        margin-bottom: 2rem;
+    }
+
+    p.questions_intitule {
+        font-size: 1.5rem;
+        color: v.$carmin;
+        font-family: v.$titre;
+    }
+    p.questions_reponse {
+        margin-left: 2rem;
+    }
+}

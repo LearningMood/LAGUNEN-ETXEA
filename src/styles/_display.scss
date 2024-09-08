@@ -1,0 +1,9 @@
+@use 'vars' as v;
+
+.display-flex {
+    
+    @media (min-width: v.breakpoint(md)) {
+        display: flex;
+        justify-content: space-between;
+    }
+}

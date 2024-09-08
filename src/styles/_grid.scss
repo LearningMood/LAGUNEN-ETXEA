@@ -1,0 +1,11 @@
+@use 'vars' as v;
+@import 'mixins';
+
+.main-grid {
+
+    @media (min-width: v.breakpoint(md)) {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem; 
+    }
+}

@@ -1,0 +1,126 @@
+@use "sass:list";
+@use "sass:math";
+@use "sass:color";
+
+// TYPO
+@import url("https://use.typekit.net/yif4owv.css");
+@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@0,500;1,500&display=swap');
+
+$dolly: 'dolly-new', sans-serif;
+$roca: 'roca', serif;
+$hanken: 'hanken-grotesk', sans-serif;
+$zilla: 'Zilla Slab', serif;
+$zilla-bg: 'Zilla Slab Highlight', cursive;
+$mrs: 'mrs-eaves', serif;
+$lato: 'Lato', sans-serif;
+$code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+$lora: 'Lora', serif;
+
+$titre: $roca;
+$titre-sans: $hanken;
+$courant: $dolly;
+$meta: $lato;
+$serif: $mrs;
+$sans: $lato;
+// FONT SIZE
+$font-size-mini: .8rem;
+$font-size-default: 1rem;
+$font-size-medium: 1.4rem;
+$font-size-large: 2rem;
+$font-size-large-plus: 2.5rem;
+$font-size-xl: 3.5rem;
+$font-size-xxl: 4rem;
+
+// FONT SIZES
+$font-size-aside: .8rem;
+$font-size-bandeau: $font-size-large;
+$font-size-titre: $font-size-large-plus;
+$font-size-ss-titre: $font-size-large;
+$font-size-intro: $font-size-medium;
+$font-size-list-title: $font-size-medium;
+
+// COLORS
+// $basque: #c63232;
+$basque: #8e3248;
+$carmin: #9a4763;
+$indigo: #66759e;
+$indigo-light: #e5e5ff;
+$pourpre: #2d2846;
+$vert: rgb(77, 172, 172);
+$rose: #ff7be5;
+$gold: #ddaf25;
+$dark: #2a2a2d;
+$darkblue: #414155;
+$gris: #4d4d4d;
+$moyen: #9f9f9f;;
+$vieuxrose: #9c474e;
+$beige: #FAF4F4;
+$navy : #323352;
+
+// COULEUR & USAGES
+$color: $basque;
+$color-accent: $rose;
+$color-text: $dark;
+$color-type: $gold;
+$color-cat: $vert;
+$color-bg-lighbox: rgb(55 56 79 / 75%);
+
+
+//   SPACES
+$base-space: 1rem;
+
+@function space($factor) {
+  @return $base-space * $factor;
+}
+
+$spaces: ();
+
+@for $i from 0 through 5 {
+  $spaces: map-merge($spaces, ($i: space($i)));
+  @if ($i < 5) {
+    $spaces: map-merge($spaces, (#{$i + 0.5}: space($i + 0.5)));
+  }
+}
+
+//  ARRONDI
+$rounded-mini: 2px;
+$rounded-md: 8px;
+$rounded-large: 1rem;
+// $img-resizing-site: 16 / 12;
+// $img-resizing-paronamic: 2 / 1;
+// $img-resizing-desktop: 19 / 10;
+
+// Grid breakpoints
+$grid-breakpoints: ( 
+  xs: 0, 
+  sm: 576px, 
+  md: 768px, 
+  lg: 992px, 
+  xl: 1200px, //75rem
+  xxl: 1400px 
+);
+
+// Définition de mes breakpoint(taille)
+@function breakpoint($name) {
+  @return map-get($grid-breakpoints, $name);
+}
+
+// Grid containers
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px
+) !default;
+
+
+// Grid columns
+// Set the number of columns and specify the width of the gutters.
+
+$grid-columns:                12 !default;
+$grid-gutter-width:           1.5rem !default;
+$grid-row-columns:            6 !default;
+
+// Container padding
+$container-padding-x: $grid-gutter-width !default;

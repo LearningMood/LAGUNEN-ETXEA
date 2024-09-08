@@ -1,0 +1,80 @@
+@use 'vars' as v;
+
+.bandeau--intro {
+    position: relative;
+    z-index: 2;
+    padding: 2rem 1rem;
+    background: #fcfcfc;
+    text-align: center;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+
+    @media (min-width: v.breakpoint(md)) {
+        padding: 5rem 8rem 3rem;
+    }
+}
+.bandeau-titre {
+    font-size: 2.6rem;
+    font-style: italic;
+    
+    @media (min-width: v.breakpoint(md)) {
+      font-size: 4rem;
+      line-height: 1;
+      
+    }
+}
+.bandeau-infos {
+    color: grey;
+    font-size: 1.5rem;
+    line-height: normal;
+    @media (min-width: v.breakpoint(md)) {
+        font-size: 1.5rem;
+    }
+}
+
+.bandeau--img {
+    padding: 40vh 4rem;
+    background-color: grey;
+    background: url('/img/cover-Lagunen-Etxea-location-Hendaye-terrasse.jpg');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bandeau--parallaxe {
+    width: 100%;
+    height: 100vh;
+    // max-height: 600px;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; 
+}
+.bandeau--texte {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-size: 1.6rem;
+    position: relative;
+    text-align: center;
+    padding: 4rem;
+
+    @media (min-width: v.breakpoint(md)) {
+        font-size: 2rem;
+    }
+
+    p {
+        z-index: 2;
+        color: #fff;
+    }
+
+    &::after {
+        background: #171a299e;
+        content: "";
+        height: 100%;
+        position: absolute;
+        width: 100%;
+    }
+}
