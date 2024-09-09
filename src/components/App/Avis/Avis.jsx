@@ -31,7 +31,7 @@ console.log('ProcessedAvis : ', processedAvis); // Ici le tableau est prêt
     return (
         <Section id="avis">
             <TitreSection titre="Avis des Clients" />
-            <p className="txt-center">{data[0]?.description}</p> {/* Assure-toi d'afficher la description */}
+            <p className="txt-center txt--lead">{data[0]?.description}</p> {/* Assure-toi d'afficher la description */}
             {processedAvis.length > 0 ? (
             <Slider {...settings}>
                 {processedAvis.map((avisItem, index) => (

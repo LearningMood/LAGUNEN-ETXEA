@@ -1,6 +1,12 @@
 @use 'vars' as v;
 .slick-slider {
     margin-top: 3rem;
+    display: flex;
+    align-items: center;
+}
+.slick-track {
+    display: flex;
+    align-items: center;
 }
 blockquote.avis-slide {
     background-color: #f7f7f7;
@@ -20,5 +26,16 @@ blockquote.avis-slide {
       color: #888;
       text-align: right;
     }
-  }
-  
+}
+
+.slick-slide {
+    margin: 1rem .6rem;
+}
+// Lightbox
+.ril__toolbar {
+  background-color: rgb(185 33 33 / 75%);
+}
+.ril__outer {
+  background-color: rgb(255 255 255 / 97%);
+  // background-color: rgb(178 178 178 / 96%);
+}
