@@ -13,7 +13,7 @@ function Questions({ data }) {
                     <ul className="questions">
                         {faqItem.questions.map((q, idx) => (
                             <li key={idx}>
-                                <p className="questions_intitule">{q.question}</p>
+                                <h3 className="questions_intitule" dangerouslySetInnerHTML={{ __html: q.question}} />
                                 <p className="questions_reponse" dangerouslySetInnerHTML={{ __html: q.reponse }} />
                             </li>
                         ))}

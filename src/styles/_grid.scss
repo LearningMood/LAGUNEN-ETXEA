@@ -9,3 +9,14 @@
         gap: 1rem; 
     }
 }
+
+.line {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+
+    .col-50 {
+        width: 50%;
+    }
+}

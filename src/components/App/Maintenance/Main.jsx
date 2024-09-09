@@ -14,6 +14,9 @@ import Questions from "../Questions/Questions";
 import Tarifs from "../Tarifs/Tarifs";
 import Remarques from "../Remarques/Remarques";
 
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+
 function Main() {
     const { data, loading, error } = useContext(SheetDataContext);
 

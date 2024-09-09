@@ -1,0 +1,24 @@
+@use 'vars' as v;
+.slick-slider {
+    margin-top: 3rem;
+}
+blockquote.avis-slide {
+    background-color: #f7f7f7;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 0 10px;
+
+    .avis-slide .description {
+      font-size: 1rem;
+      color: #333;
+    }
+    
+    .avis-slide .auteur {
+      font-size: 0.9rem;
+      color: #888;
+      text-align: right;
+    }
+  }
+  

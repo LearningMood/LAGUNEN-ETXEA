@@ -1,7 +1,7 @@
-function Section ({children, id}) {
+function Section ({children, id, wrapperSup}) {
     return (
         <section id={id}>
-            <div className="wrapper">
+            <div className={`wrapper ${wrapperSup ? wrapperSup : ''}`}>
                 {children}
             </div>
         </section>

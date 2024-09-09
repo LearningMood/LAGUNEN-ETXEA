@@ -30,17 +30,6 @@ h1, h2, h3, h4, h5, h6 {
         background-color: v.$carmin; // Utiliser votre variable ou une couleur spécifique
     }
   
-    .titre {
-      font-size: 2rem;
-
-        &--max {
-            font-size: 4rem;
-            color: v.$carmin;
-        }
-        &--cap {
-            text-transform: uppercase;
-        }
-    }
 
   
     @media (min-width: v.breakpoint(md)) {
@@ -49,3 +38,24 @@ h1, h2, h3, h4, h5, h6 {
       }
     }
   }
+
+  .titre {
+    font-size: 2rem;
+
+      &--max {
+          font-size: 4rem;
+          color: v.$carmin;
+      }
+      &--cap {
+          text-transform: uppercase;
+      }
+      &--basque {
+        color: v.$basque;
+      }
+  }
+
+// EMPLACEMENT
+.titre-fd {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}

@@ -5,11 +5,21 @@ function Tarifs({ data }) {
   if (!data || data.length === 0) {
     return <p>Aucune donnée sur les tarifs à afficher.</p>;
   }
+
+  // Séparer la description par les sauts de ligne
+  const lignes = data[0].description.split('\n'); // J'utilise '\n' comme séparateur
     return (
       data.map((tarif, index) => (
-        <Section id={tarif.section} key={index}>
+        <Section id={tarif.section} key={index} >
           <TitreSection titre={tarif.titre} />
-          <p className="txt-center">{tarif.description}</p>
+          <ul>
+            {lignes.map((ligne, index) => (
+              <li key={index}>{ligne}</li>
+            ))}
+          </ul>
+          <p className="" dangerouslySetInnerHTML={{ __html: tarif.ajout }} />
+          <p className="" dangerouslySetInnerHTML={{ __html: tarif.description_inclus }} />
+          <p className="r" dangerouslySetInnerHTML={{ __html: tarif.description_periodes }} />
 
               <table>
           <thead>

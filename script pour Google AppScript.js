@@ -2,7 +2,9 @@ function exportJSON() {
   var spreadsheetId = '1bcQHsKSjlly4ByBWYb0VNIPUnpr5X-bTHC9W8_ZwMOM'; // L'ID de la Google Sheets
   var folderId = '1-8JMlLo49w5sYZyUlVaxoTaD_Ur3cqd2';  //  l'ID du dossier DOC
   var sheetNames = ['faq', 'intro', 'logement', 'tarif', 'remarques', 'equipements', 'avis', 'emplacement', 'contact']; // Liste des onglets
+  var fileName = 'exported-data.json'; // nom du fichier à ecraser
   var jsonData = {}; // Stockage final des données
+
   
   for (var i = 0; i < sheetNames.length; i++) {
     var sheet = SpreadsheetApp.openById(spreadsheetId).getSheetByName(sheetNames[i]);
@@ -41,6 +43,15 @@ function exportJSON() {
     } else {
       jsonData[sheetNames[i]] = sheetData; // Ajouter les autres onglets normalement
     }
+  }
+
+  // Rechercher un fichier existant avec le même nom dans Google Drive
+  var existingFile = DriveApp.getFilesByName(fileName);
+
+  // S'il existe déjà un fichier avec ce nom, on le supprime
+  if (existingFile.hasNext()) {
+    var file = existingFile.next();
+    file.setTrashed(true);  // Supprimer (envoyer à la corbeille)
   }
 
   // Exporter en fichier JSON
