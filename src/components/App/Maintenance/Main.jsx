@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import Avis from "../Avis/Avis";
 import Contact from "../Contact/Contact";
 import { SheetDataContext } from "../Context/DataContext";
@@ -17,16 +17,15 @@ import Remarques from "../Remarques/Remarques";
 function Main() {
     const { data, loading, error } = useContext(SheetDataContext);
 
-    // Pour le menu
-    const sections = [
-        ...data.logement,  // Titre et section de Logement
-        ...data.tarif,     // Titre et section de Tarif
-        ...data.emplacement, // Titre et section de l'emplacement
-        ...data.faq        // Titre et section de FAQ
-      ];
-
     if (loading) return <p>Chargement...</p>;
     if (error) return <p>{error}</p>;
+
+    const sections = [
+        ...(data.logement || []),
+        ...(data.tarif || []),
+        ...(data.emplacement || []),
+        ...(data.faq || [])
+    ];
 
     return (
         <div className="app">
