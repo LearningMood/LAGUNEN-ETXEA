@@ -19,6 +19,7 @@
 .bandeau-titre {
     font-size: 2.6rem;
     font-style: italic;
+    color: v.$basque;
     
     @media (min-width: v.breakpoint(md)) {
       font-size: 4rem;
@@ -36,21 +37,26 @@
 }
 
 .bandeau--img {
-    padding: 40vh 4rem;
+    padding: 4rem;
     background-color: grey;
     background: url('/img/cover-Lagunen-Etxea-location-Hendaye-terrasse.jpg');
     display: flex;
     justify-content: center;
     align-items: center;
+    @media (min-width: v.breakpoint(md)) {
+    }
 }
 
 .bandeau--parallaxe {
     width: 100%;
-    height: 100vh;
+    height: 300px;
     // max-height: 600px;
     background-size: cover;
     background-position: center;
     background-attachment: fixed; 
+    @media (min-width: v.breakpoint(md)) {
+        height: 100vh;
+    }
 }
 .bandeau--texte {
     align-items: center;

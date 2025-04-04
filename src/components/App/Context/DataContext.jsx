@@ -10,7 +10,7 @@ export const SheetDataProvider = ({ children }) => {
 
     const fetchData = async () => {
         try {
-            const response = await fetch('/exported-data.json');
+            const response = await fetch('./exported-data.json');
             const result = await response.json();
             console.log(result);
             setData(result);  // Stocke toutes les données dans un seul state
