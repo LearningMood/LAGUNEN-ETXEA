@@ -2,6 +2,7 @@ import Section from "../Layout/Section";
 import TitreSection from "../Layout/TitreSection";
 
 function Questions({ data }) {
+    // console.log("Dans Questions : ", data);
     if (!data || data.length === 0) {
         return <p>Aucune donnée sur les FAQ à afficher.</p>;
       }

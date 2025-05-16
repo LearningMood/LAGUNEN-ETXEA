@@ -13,7 +13,7 @@ build/
 
 # Cache local (comme celui de gh-pages)
 .cache/
-
+.env* 
 # Système
 .DS_Store
 Thumbs.db

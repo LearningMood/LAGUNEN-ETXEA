@@ -1,37 +1,39 @@
-import React, { createContext, useState, useEffect } from "react";
+/**
+ * orchestrateur & stockage global
+ * - Fait l’appel de données au 1ᵉʳ montage (useEffect)
+ * - Stocke data, loading, error dans un React Context	Utilisé dans toute la React-App (useContext) pour accéder aux données
+ */
 
-// Créer un contexte
+import React, { createContext, useState, useEffect } from 'react';
+import { fetchAllTabs } from '../../../api/sheets';
+
 export const SheetDataContext = createContext();
 
-export const SheetDataProvider = ({ children }) => {
-    const [data, setData] = useState([]);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
+export function SheetDataProvider({ children }) {
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState('');
 
-    const fetchData = async () => {
-        try {
-            const response = await fetch('./exported-data.json');
-            const result = await response.json();
-            console.log(result);
-            setData(result);  // Stocke toutes les données dans un seul state
-        } catch (error) {
-            setError('Erreur lors de la récupération des données');
-        } finally {
-            setLoading(false);
-        }
-    };
+useEffect(() => {
+  (async () => {
+    try {
+      const structured = await fetchAllTabs();  // ✅ déjà prêt
+      setData(structured);
+    } catch (err) { 
+      setError(err.message || 'Lecture impossible');
+    } finally {
+        setLoading(false);
+      } 
+  })();
+}, []);
 
-    useEffect(() => {
-        fetchData();
-    }, []);
 
-    return (
-        <SheetDataContext.Provider value={{
-            data,
-            loading,
-            error
-        }}>
-            {children}
-        </SheetDataContext.Provider>
-    );
-};
+  return (
+    <SheetDataContext.Provider value={{ 
+        data, 
+        loading, 
+        error }}>
+      {children}
+    </SheetDataContext.Provider>
+  );
+}

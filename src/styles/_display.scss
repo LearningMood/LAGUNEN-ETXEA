@@ -1,5 +1,21 @@
 @use 'vars' as v;
 
+
+.display-grid {
+    display: grid;
+    gap: v.$gap;
+    // chaque colonne fait au moins $min-item-size et au plus 1fr
+    grid-template-columns: repeat(
+        auto-fill,
+        minmax(v.$min-item-size, 1fr)
+    );
+   
+    @media (min-width: v.breakpoint(md)) {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
 .display-flex {
     
     @media (min-width: v.breakpoint(md)) {

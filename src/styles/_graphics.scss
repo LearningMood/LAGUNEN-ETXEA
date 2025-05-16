@@ -1,14 +1,25 @@
 @use 'vars' as v;
 .picto {
-    padding: 3rem;
-    border: solid grey 1px;
-    border-radius: 4px;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    -ms-border-radius: 4px;
-    -o-border-radius: 4px;
+    // padding: 3rem;
+    // border: solid grey 1px;
+    // border-radius: 4px;
+    // -webkit-border-radius: 4px;
+    // -moz-border-radius: 4px;
+    // -ms-border-radius: 4px;
+    // -o-border-radius: 4px;
 }
+.picto--equipement {
+    width: clamp(40px, 50%, v.$max-item-size);     // largeur max du SVG
+    aspect-ratio: 1 / 1;  // carré
+    margin-bottom: 0.5rem;
 
+  svg {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+  }
+}
 .map {
     background-color: v.$dark;
     height: 500px;
