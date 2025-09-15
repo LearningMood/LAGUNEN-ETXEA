@@ -9,7 +9,7 @@ function GaleriePictos({ data }) {
         <div className="display-grid">
           { data.map((equipement)=>(
             <figure key={equipement.id} className="picto picto--equipement">
-              <img src={`/picto/${equipement.picto}.svg`} alt={`icone ${equipement.label}`}/>
+              <img src={`/pictos/${equipement.picto}.svg`} alt={`icone ${equipement.label}`}/>
               <figcaption>{equipement.label}</figcaption>
             </figure>
           ))}

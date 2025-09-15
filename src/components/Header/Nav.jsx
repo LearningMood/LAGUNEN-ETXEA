@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-function Nav({ sections }) {
+export default function Nav({ sections }) {
   const [isSticky, setSticky] = useState(false);
   // State pour savoir si le menu est ouvert ou non
   const [isOpen, setIsOpen] = useState(false);
@@ -47,11 +47,24 @@ function Nav({ sections }) {
       <ul className={`main-nav ${isOpen ? 'nav-active' : ''}`}>
       {sections.map((section, index)=> (
         <li key={index}>
-          <a href={`#${section.section}`} onClick={toggleMenu}>{section.titre}</a>
+          <a href={`#${section.id}`} onClick={toggleMenu}>{section.label}</a>
         </li>
       ))}
       </ul>
     </nav>
   );
 }
-export default Nav;
+
+// export default function Nav({ sections }) {
+//   return (
+//     <nav>
+//       <ul>
+//         {sections.map(s => (
+//           <li key={s.id}>
+//             <a href={`#${s.id}`}>{s.label}</a>
+//           </li>
+//         ))}
+//       </ul>
+//     </nav>
+//   );
+// }

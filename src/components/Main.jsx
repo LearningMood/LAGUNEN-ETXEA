@@ -1,7 +1,7 @@
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import Avis from "./Avis/Avis";
 import Contact from "./Contact/Contact";
-import { SheetDataContext } from "./Context/DataContext";
+
 import Emplacement from "./Emplacement/Emplacement";
 import Footer from "./Footer/Footer";
 import Galerie from "./Galerie/Galerie";
@@ -18,17 +18,17 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 function Main() {
-    const { data, loading, error } = useContext(SheetDataContext);
+    // const [loading, setLoading ] = useState(false);
 
-    if (loading) return <p>Chargement...</p>;
-    if (error) return <p>{error}</p>;
+    // if (loading) return <p>Chargement...</p>;
+    // if (error) return <p>{error}</p>;
 
-    const sections = [
-        ...(data.logement || []),
-        ...(data.tarif || []),
-        ...(data.emplacement || []),
-        ...(data.faq || [])
-    ];
+    // const sections = [
+    //     ...(data.logement || []),
+    //     ...(data.tarif || []),
+    //     ...(data.emplacement || []),
+    //     ...(data.faq || [])
+    // ];
 
     return (
         <div className="app">
