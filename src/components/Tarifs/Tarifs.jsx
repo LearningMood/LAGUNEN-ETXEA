@@ -1,47 +1,76 @@
+import ParagrapheCenter from "../Layout/ParagrapheCenter";
 import Section from "../Layout/Section";
 import TitreSection from "../Layout/TitreSection";
 
-function Tarifs({ data }) {
-  if (!data || data.length === 0) {
-    return <p>Aucune donnée sur les tarifs à afficher.</p>;
-  }
+function f(dateStr) {
+  try {
+    return new Date(dateStr).toLocaleDateString('fr-FR', { day:'2-digit', month:'2-digit' });
+  } catch { return dateStr; }
+}
 
-  // Séparer la description par les sauts de ligne
-  const lignes = data[0].description.split('\n'); // J'utilise '\n' comme séparateur
-    return (
-      data.map((tarif, index) => (
-        <Section id={tarif.section} key={index} >
-          <TitreSection titre={tarif.titre} />
-          <ul>
-            {lignes.map((ligne, index) => (
-              <li key={index}>{ligne}</li>
-            ))}
-          </ul>
-          <p className="" dangerouslySetInnerHTML={{ __html: tarif.ajout }} />
-          <p className="" dangerouslySetInnerHTML={{ __html: tarif.description_inclus }} />
-          <p className="r" dangerouslySetInnerHTML={{ __html: tarif.description_periodes }} />
+export default function Tarifs({ dataIntro, rows = [], infos }) {
+  if (!dataIntro) return <p>Aucune donnée sur les tarifs à afficher.</p>;
+  if (!rows.length) return null;
 
-              <table>
+
+  // console.log('DATAINTRO : ', dataIntro);
+  console.log('DATAINFOS : ', infos);
+
+  return (
+
+    <Section id="tarif">
+      <TitreSection titre={dataIntro.titre} />
+      <ParagrapheCenter texte={dataIntro.description} />
+      <div className="tableau-tarifs">
+        <table>
           <thead>
-
-              <tr>
-                <td>Tableau</td>
-                <td>1</td>
-                <td>2</td>
-              </tr>
+            <tr>
+              <th>Saison</th>
+              <th>Du</th>
+              <th>Au</th>
+              <th>Nuit (€)</th>
+              <th>Semaine (€)</th>
+              <th>Min. nuits</th>
+              <th>Note</th>
+            </tr>
           </thead>
           <tbody>
-              <tr>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
+            {rows.map((r, i) => (
+              <tr key={i}>
+                <td>{r.saison}</td>
+                <td>{f(r.start_date)}</td>
+                <td>{f(r.end_date)}</td>
+                <td>{r.price_night ?? ''}</td>
+                <td>{r.price_week ?? ''}</td>
+                <td>{r.min_nights ?? ''}</td>
+                <td>{r.note || ''}</td>
               </tr>
+            ))}
           </tbody>
-  
         </table>
-            </Section>
-      ))
-    );
-  }
-  export default Tarifs;
-  
+        </div>
+
+      {/* Textes complémentaires */}
+
+      <ul className="infos">
+        {infos.inclus && (
+          <li><strong>INCLUS :</strong> {infos.inclus}</li>
+        )}
+        {infos.menage && (
+          <li><strong>MÉNAGE :</strong> {infos.menage}</li>
+        )}
+        {infos.non_inclus && (
+          <li><strong>NON INCLUS :</strong> {infos.non_inclus}</li>
+        )}
+        {infos.periodes && (
+          <li><strong>MINIMUM NUITÉS :</strong> {infos.periodes}</li>
+        )}
+        {infos.note && (
+          <li><strong>TAXE DE SÉJOUR :</strong> {infos.note}</li>
+        )}
+      </ul>
+
+        
+    </Section>
+  );
+}

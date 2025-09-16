@@ -2,18 +2,18 @@ import ParagrapheCenter from "../Layout/ParagrapheCenter";
 import Section from "../Layout/Section";
 import TitreSection from "../Layout/TitreSection";
 
-function Logement( { logement }) {
+function Logement( { dataIntro }) {
 
-  console.log('LOGEMENT' , logement);
+  // console.log('LOGEMENT' , dataIntro);
 
   // Vérifie d'abord si les données existent
-  if (!logement) return <p>Aucune donnée sur le logement à afficher.</p>;
+  if (!dataIntro) return <p>Aucune donnée sur le logement à afficher.</p>;
 
   // Si les données existent, on les rend
   return (
       <Section id="logement">
-          <TitreSection titre={logement.titre} />
-          <ParagrapheCenter texte={logement.description} />
+          <TitreSection titre={dataIntro.titre} />
+          <ParagrapheCenter texte={dataIntro.description} />
     </Section>
   );
 };

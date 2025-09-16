@@ -1,5 +1,7 @@
 @use 'vars' as v;
-
+.tableau-tarifs {
+    margin: 1rem 0 4rem;
+}
 table {
     border-collapse: collapse;
     width: 100%;
@@ -7,11 +9,12 @@ table {
     background-color:rgb(255 250 255 / 63%);
 }
 tr, td, th {
-    border: solid 1px v.$color;
+    border: solid 1px lighten(v.$color, 40%);
     padding: 1rem 1rem;
 }
 th {
-    background-color: v.$color;
+    background-color: lighten(v.$color, 30%);
+    color: #fff;
     text-transform: uppercase;
 }
 

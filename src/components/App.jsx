@@ -10,59 +10,61 @@ import Nav from "./Header/Nav.jsx";
 import Intro from "./Intro/Intro.jsx";
 import Logement from "./Logement/Logement.jsx";
 import Questions from "./Questions/Questions.jsx";
-import Tarifs from "./Tarifs/Tarifs.jsx";
 import Remarques from "./Remarques/Remarques.jsx";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Tarifs from "./Tarifs/Tarifs.jsx";
+
 
 export default function App() {
-    const { loading, error, data } = useSheetsData();
+  const { loading, error, data } = useSheetsData();
+  if (loading) return <p>Chargement…</p>;
+  if (error)   return <p>Erreur : {error}</p>;
+  console.log ('DANS APP : ', data);
 
-    if (loading) return <p>Chargement…</p>;
-    if (error) return <p>Erreur : {error}</p>;
+  // 🔧 Normalisations tolérantes (camelCase OU snake_case)
+  const sections   = Array.isArray(data.sectionsMeta) ? data.sectionsMeta
+                   : Array.isArray(data.sections_meta) ? data.sections_meta
+                   : [];
+  const siteMeta   = data.siteMeta ?? data.site_meta ?? {};
+  const tarifRows  = data.tarif ?? [];
+  const photos     = data.photos ?? [];
+  const tarifInfos = data.tarifInfos ?? data.tarif_infos ?? {};
+  const faqBlock   = data.faq && Array.isArray(data.faq) ? data.faq[0] : data.faq;
 
-    const { siteMeta, tarif, faq, equipements, avis, contact } = data;
+  // 🧭 Nav filtrée
+  const ALLOWED = new Set(["logement", "tarif", "avis", "faq"]);
+  const ORDER_DEFAULT   = { logement: 1, tarif: 2, avis: 3, faq: 4 };
+  const LABEL_FALLBACK  = { logement: "Le logement", tarif: "Tarifs", avis: "Avis", faq: "Questions fréquentes" };
 
-    const sectionsMeta = data.sectionsMeta || data.sections_meta || [];
+  const navSections = sections
+    .filter(s => s && ALLOWED.has(String(s.section)))
+    .map(s => ({
+      id: String(s.section),
+      label: (s.titre && String(s.titre).trim()) || LABEL_FALLBACK[s.section],
+      order: Number(s.ordre) || ORDER_DEFAULT[s.section] || 99
+    }))
+    .sort((a, b) => a.order - b.order);
 
-    const ALLOWED = new Set(["logement", "tarif", "avis", "faq"]);
-    const ORDER_DEFAULT = { logement: 1, tarif: 2, avis: 3, faq: 4 };
-    const LABEL_FALLBACK = { logement: "Le logement", tarif: "Tarifs", avis: "Avis", faq: "Questions fréquentes" };
+  // 🔎 Sélections de sections (on part TOUJOURS de `sections`)
+  const sectionIntro     = sections.find?.(s => s.section === "intro")      || null;
+  const sectionLogement  = sections.find?.(s => s.section === "logement")   || null;
+  const sectionRemarques = sections.find?.(s => s.section === "remarques")  || null;
+  const sectionTarif    = sections.find?.(s => s.section === "tarif")      || null;
 
-    const navSections = sectionsMeta
-        .filter(s => s && ALLOWED.has(String(s.section)))
-        .map(s => ({
-            id: String(s.section),
-            label: (s.titre && String(s.titre).trim()) || LABEL_FALLBACK[s.section],
-            order: Number(s.ordre) || ORDER_DEFAULT[s.section] || 99
-        }))
-        .sort((a, b) => a.order - b.order);
-    console.log(data);
-
-    const intro = sectionsMeta.find(s => s.section === "intro");
-    const logement = sectionsMeta.find(s => s.section === "logement")
-    const remarques = sectionsMeta.find(s => s.section === "remarques")
-
-    return (
-        //   <pre>{JSON.stringify(data, null, 2)}</pre>;
-        <div className="app">
-            <Nav sections={navSections} />
-            <Header />
-            <Intro intro={intro} />
-            <Galerie />
-            <Logement logement={logement} />
-            <Remarques remarques={remarques} />
-            {/* <GaleriePictos data={data.equipements} /> */}
-            {/* <Tarifs data={data.tarif} /> */}
-            {/* <Avis data={data.avis} /> */}
-            {/* <Emplacement data={data.emplacement} /> */}
-            {/* <Contact data={data.contact} /> */}
-            {/* <Questions data={data.faq} /> */}
-            <Footer />
-        </div>
-
-    )
-
-
+  return (
+    <div className="app">
+      <Nav sections={navSections} />
+      <Header title={siteMeta["titre_site"]} />
+      <Intro dataIntro={sectionIntro} />
+      <Galerie photos={photos} />
+      <Logement dataIntro={sectionLogement} />
+      <Remarques dataIntro={sectionRemarques} />
+      <Tarifs dataIntro={sectionTarif} rows={tarifRows} infos={tarifInfos} />
+      {/* <Tarifs dataIntro={sectionTarif} rows={tarifRows} infos={tarifInfos} /> */}
+      {/* <Questions data={faqBlock} /> */}
+      <Footer />
+    </div>
+  );
 }
