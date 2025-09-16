@@ -1,39 +1,47 @@
 @use 'vars' as v;
 @import 'mixins';
+
 html {
     scroll-behavior: smooth;
 }
+
 .wrapper {
     margin-left: auto;
     margin-right: auto;
-    max-width: 75rem;
+    width: 75rem;
 
     @media (min-width: v.breakpoint(lg)) {
         padding: 2rem;
 
         p.description {
             max-width: 600px;
-            margin: 0 auto;
+            margin: 0 auto 4rem;
         }
     }
 }
 
 .wrapper--mini {
-  max-width: 30rem;
+    max-width: 30rem;
 }
 
-.wrapper-lg {
-    padding: 1rem;
-}
+.wrapper--medium {
+    max-width: 100%;
 
-.wrapper-lg {
     @media (min-width: v.breakpoint(md)) {
-        padding-left:2rem;
-        padding-right: 2rem;
+        width: 50rem;
     }
+}
+
+.wrapper--lg {
+    padding: 1rem;
+    width: 100%;
+}
+
+.wrapper--lg {
+    @media (min-width: v.breakpoint(md)) {}
+
     @media (min-width: v.breakpoint(lg)) {
         padding-left: 4rem;
         padding-right: 4rem;
     }
 }
-

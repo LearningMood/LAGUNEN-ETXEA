@@ -4,23 +4,23 @@ import TitreSection from "../Layout/TitreSection";
 
 function f(dateStr) {
   try {
-    return new Date(dateStr).toLocaleDateString('fr-FR', { day:'2-digit', month:'2-digit' });
+    return new Date(dateStr).toLocaleDateString('fr-FR', { day: '2-digit', month: '2-digit' });
   } catch { return dateStr; }
 }
 
-export default function Tarifs({ dataIntro, rows = [], infos }) {
-  if (!dataIntro) return <p>Aucune donnée sur les tarifs à afficher.</p>;
+export default function Tarifs({ header, rows = [], infos }) {
+  if (!header) return <p>Aucune donnée sur les tarifs à afficher.</p>;
   if (!rows.length) return null;
 
 
-  // console.log('DATAINTRO : ', dataIntro);
-  console.log('DATAINFOS : ', infos);
+  // console.log('header : ', header);
+  // console.log('DATAINFOS : ', infos);
 
   return (
 
     <Section id="tarif">
-      <TitreSection titre={dataIntro.titre} />
-      <ParagrapheCenter texte={dataIntro.description} />
+      <TitreSection titre={header.titre} />
+      <ParagrapheCenter texte={header.description} />
       <div className="tableau-tarifs">
         <table>
           <thead>
@@ -48,29 +48,30 @@ export default function Tarifs({ dataIntro, rows = [], infos }) {
             ))}
           </tbody>
         </table>
-        </div>
+      </div>
 
       {/* Textes complémentaires */}
+      <div className="wrapper wrapper--medium">
+        <ul className="infos">
+          {infos.inclus && (
+            <li><strong>INCLUS :</strong> {infos.inclus}</li>
+          )}
+          {infos.menage && (
+            <li><strong>MÉNAGE :</strong> {infos.menage}</li>
+          )}
+          {infos.non_inclus && (
+            <li><strong>NON INCLUS :</strong> {infos.non_inclus}</li>
+          )}
+          {infos.periodes && (
+            <li><strong>MINIMUM NUITÉS :</strong> {infos.periodes}</li>
+          )}
+          {infos.note && (
+            <li><strong>TAXE DE SÉJOUR :</strong> {infos.note}</li>
+          )}
+        </ul>
+      </div>
 
-      <ul className="infos">
-        {infos.inclus && (
-          <li><strong>INCLUS :</strong> {infos.inclus}</li>
-        )}
-        {infos.menage && (
-          <li><strong>MÉNAGE :</strong> {infos.menage}</li>
-        )}
-        {infos.non_inclus && (
-          <li><strong>NON INCLUS :</strong> {infos.non_inclus}</li>
-        )}
-        {infos.periodes && (
-          <li><strong>MINIMUM NUITÉS :</strong> {infos.periodes}</li>
-        )}
-        {infos.note && (
-          <li><strong>TAXE DE SÉJOUR :</strong> {infos.note}</li>
-        )}
-      </ul>
 
-        
     </Section>
   );
 }

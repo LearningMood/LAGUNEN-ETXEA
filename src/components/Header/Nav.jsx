@@ -9,7 +9,7 @@ export default function Nav({ sections }) {
   const toggleMenu = () => {
     setIsOpen(!isOpen); // Inverse l'état ouvert/fermé
   };
-  console.log("Dans Nav " , sections);
+  // console.log("Dans Nav " , sections);
 
 
   useEffect(() => {

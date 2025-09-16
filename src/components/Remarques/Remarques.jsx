@@ -2,15 +2,15 @@ import ParagrapheCenter from "../Layout/ParagrapheCenter";
 import Section from "../Layout/Section";
 import TitreSection from "../Layout/TitreSection";
 
-function Remarques({ dataIntro }) {
-  console.log('REMARQUES', dataIntro);
-  if (!dataIntro) {
+function Remarques({ header }) {
+  // console.log('REMARQUES', header);
+  if (!header) {
     return <p>Aucune donnée sur les remarques à afficher.</p>;
   }
   return (
     <Section id="remarques">
-      <TitreSection titre={dataIntro.titre} />
-      <ParagrapheCenter texte={dataIntro.description} />
+      <TitreSection titre={header.titre} />
+      <ParagrapheCenter texte={header.description} />
     </Section>
   )
 

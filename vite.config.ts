@@ -5,6 +5,7 @@ import react from '@vitejs/plugin-react'
 export default defineConfig(({ mode }) => {
   return {
   plugins: [react()],
-  base: mode === 'production' ? '/LAGUNEN-ETXEA/' : '/',  // En prod: avec préfixe, en dev: sans  // Définir le chemin de base pour le déploiement sur GitHub Pages
+  base: '/', 
+  // base: mode === 'production' ? '/LAGUNEN-ETXEA/' : '/',  // En prod: avec préfixe, en dev: sans  // Définir le chemin de base pour le déploiement sur GitHub Pages
   }
 });

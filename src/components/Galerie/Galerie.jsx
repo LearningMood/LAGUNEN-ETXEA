@@ -14,8 +14,7 @@ function Galerie({ photos }) {
   }
 
   return (
-    <Section id="galerie">
-      <TitreSection titre="Les photos" />
+    <Section id="galerie" wrapperSup="wrapper--lg">
       <div className="mosaique">
         {photos.map((p, index) => (
           <figure key={index} className="mosaique-img">

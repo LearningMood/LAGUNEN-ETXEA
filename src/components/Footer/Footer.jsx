@@ -1,7 +1,7 @@
 function Footer() {
     return (
         <footer>
-            <h1>Le footer</h1>
+            <h1>Contact :</h1><a href="mailto=contact@lagunen.etxea.fr">Écrire à Guillaume</a>
         </footer>
     )
 }

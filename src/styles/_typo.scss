@@ -3,3 +3,10 @@
 body {
     font-family: v.$dolly;
 }
+
+figcaption { 
+    text-align: center;
+    line-height: 1;
+    color: v.$gris;
+    font-size: .9rem;
+}

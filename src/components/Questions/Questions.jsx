@@ -2,16 +2,16 @@ import ParagrapheCenter from "../Layout/ParagrapheCenter";
 import Section from "../Layout/Section";
 import TitreSection from "../Layout/TitreSection";
 
-function Questions({ dataIntro, questions }) {
-  const titre = dataIntro?.titre || "Questions fréquentes";
-  const description = dataIntro?.description || "";
+function Questions({ header, questions }) {
+  const titre = header?.titre || "Questions fréquentes";
+  const description = header?.description || "";
   const items = Array.isArray(questions) ? questions : [];
 
   if (!items.length) {
     return (
       <Section id="faq">
         <TitreSection titre={titre} />
-{ description &&<ParagrapheCenter texte={description} /> }
+        { description &&<ParagrapheCenter texte={description} /> }
       
         <p>Aucune question trouvée.</p>
       </Section>
