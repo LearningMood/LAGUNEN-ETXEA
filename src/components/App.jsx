@@ -18,53 +18,55 @@ import Tarifs from "./Tarifs/Tarifs.jsx";
 
 
 export default function App() {
-  const { loading, error, data } = useSheetsData();
-  if (loading) return <p>Chargement…</p>;
-  if (error)   return <p>Erreur : {error}</p>;
-  console.log ('DANS APP : ', data);
+    const { loading, error, data } = useSheetsData();
+    if (loading) return <p>Chargement…</p>;
+    if (error) return <p>Erreur : {error}</p>;
+    console.log('DANS APP : ', data);
 
-  // 🔧 Normalisations tolérantes (camelCase OU snake_case)
-  const sections   = Array.isArray(data.sectionsMeta) ? data.sectionsMeta
-                   : Array.isArray(data.sections_meta) ? data.sections_meta
-                   : [];
-  const siteMeta   = data.siteMeta ?? data.site_meta ?? {};
-  const tarifRows  = data.tarif ?? [];
-  const photos     = data.photos ?? [];
-  const tarifInfos = data.tarifInfos ?? data.tarif_infos ?? {};
-  const faqBlock   = data.faq && Array.isArray(data.faq) ? data.faq[0] : data.faq;
+    // 🔧 Normalisations tolérantes (camelCase OU snake_case)
+    const sections = Array.isArray(data.sectionsMeta) ? data.sectionsMeta
+        : Array.isArray(data.sections_meta) ? data.sections_meta
+            : [];
+    const siteMeta = data.siteMeta ?? data.site_meta ?? {};
+    const tarifRows = data.tarif ?? [];
+    const photos = data.photos ?? [];
+    const tarifInfos = data.tarifInfos ?? data.tarif_infos ?? {};
+    // bloc FAQ venant de l’API (tableau avec un objet)
+const faqBlock = Array.isArray(data.faq) ? data.faq[0] : data.faq || null;
 
-  // 🧭 Nav filtrée
-  const ALLOWED = new Set(["logement", "tarif", "avis", "faq"]);
-  const ORDER_DEFAULT   = { logement: 1, tarif: 2, avis: 3, faq: 4 };
-  const LABEL_FALLBACK  = { logement: "Le logement", tarif: "Tarifs", avis: "Avis", faq: "Questions fréquentes" };
 
-  const navSections = sections
-    .filter(s => s && ALLOWED.has(String(s.section)))
-    .map(s => ({
-      id: String(s.section),
-      label: (s.titre && String(s.titre).trim()) || LABEL_FALLBACK[s.section],
-      order: Number(s.ordre) || ORDER_DEFAULT[s.section] || 99
-    }))
-    .sort((a, b) => a.order - b.order);
+    // 🧭 Nav filtrée
+    const ALLOWED = new Set(["logement", "tarif", "avis", "faq"]);
+    const ORDER_DEFAULT = { logement: 1, tarif: 2, avis: 3, faq: 4 };
+    const LABEL_FALLBACK = { logement: "Le logement", tarif: "Tarifs", avis: "Avis", faq: "Questions fréquentes" };
 
-  // 🔎 Sélections de sections (on part TOUJOURS de `sections`)
-  const sectionIntro     = sections.find?.(s => s.section === "intro")      || null;
-  const sectionLogement  = sections.find?.(s => s.section === "logement")   || null;
-  const sectionRemarques = sections.find?.(s => s.section === "remarques")  || null;
-  const sectionTarif    = sections.find?.(s => s.section === "tarif")      || null;
+    const navSections = sections
+        .filter(s => s && ALLOWED.has(String(s.section)))
+        .map(s => ({
+            id: String(s.section),
+            label: (s.titre && String(s.titre).trim()) || LABEL_FALLBACK[s.section],
+            order: Number(s.ordre) || ORDER_DEFAULT[s.section] || 99
+        }))
+        .sort((a, b) => a.order - b.order);
 
-  return (
-    <div className="app">
-      <Nav sections={navSections} />
-      <Header title={siteMeta["titre_site"]} />
-      <Intro dataIntro={sectionIntro} />
-      <Galerie photos={photos} />
-      <Logement dataIntro={sectionLogement} />
-      <Remarques dataIntro={sectionRemarques} />
-      <Tarifs dataIntro={sectionTarif} rows={tarifRows} infos={tarifInfos} />
-      {/* <Tarifs dataIntro={sectionTarif} rows={tarifRows} infos={tarifInfos} /> */}
-      {/* <Questions data={faqBlock} /> */}
-      <Footer />
-    </div>
-  );
+    // 🔎 Sélections de sections (on part TOUJOURS de `sections`)
+    const sectionIntro = sections.find?.(s => s.section === "intro") || null;
+    const sectionLogement = sections.find?.(s => s.section === "logement") || null;
+    const sectionRemarques = sections.find?.(s => s.section === "remarques") || null;
+    const sectionTarif = sections.find?.(s => s.section === "tarif") || null;
+    const sectionFaq = sections.find?.(s => s.section === "faq") || null;
+
+    return (
+        <div className="app">
+            <Nav sections={navSections} />
+            <Header title={siteMeta["titre_site"]} />
+            <Intro dataIntro={sectionIntro} />
+            <Galerie photos={photos} />
+            <Logement dataIntro={sectionLogement} />
+            <Remarques dataIntro={sectionRemarques} />
+            <Tarifs dataIntro={sectionTarif} rows={tarifRows} infos={tarifInfos} />
+            <Questions dataIntro={sectionFaq} questions={faqBlock?.questions} />
+            <Footer />
+        </div>
+    );
 }

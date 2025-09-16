@@ -10,20 +10,15 @@ export function normalizeAll(data) {
     return acc;
   }, {});
 
+  console.log('Dans Normalize : ', data);
 
   const photos = arr(data.photos)
   .filter(p => p.url)                // seulement si url non vide
   .sort((a, b) => (a.ordre||0) - (b.ordre||0));
 
   // faq: sécuriser
-  const faqBlock = arr(data.faq)[0] || {};
-  const faq = {
-    titre: String(faqBlock.titre ?? '') || 'Questions fréquentes',
-    description: String(faqBlock.description ?? ''),
-    questions: arr(faqBlock.questions).filter(q =>
-      (q && (q.question || q.reponse))
-    )
-  };
+const faqBlock = Array.isArray(data.faq) ? data.faq[0] : data.faq;
+// faqBlock.titre, faqBlock.description, faqBlock.questions (array {question,reponse})
     // tarif: filtre lignes vides
   const nonEmpty = (obj) => Object.values(obj || {}).some(v => String(v ?? '').trim() !== '');
   // const tarif = arr(data.tarif).filter(nonEmpty);
@@ -51,7 +46,7 @@ export function normalizeAll(data) {
     photos,
     avis,
     transport,
-    faq,
+    faq: faqBlock, // pas compris, mais ok
     contact,
 
   };
