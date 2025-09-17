@@ -33,7 +33,7 @@ export default function App() {
     // console.log('DANS APP : ', data);
 
     if (loading) {
-        return <LoadingPictos icons={ICONS} message="Nous préparons vos contenus…" />;
+        return <LoadingPictos icons={ICONS} message="Chargement en cours..." />;
     }
 
     // 🔧 Normalisations tolérantes (camelCase OU snake_case)

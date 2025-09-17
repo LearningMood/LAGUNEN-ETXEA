@@ -1,5 +1,4 @@
-// components/Loading/LoaderPictosMarquee.jsx
-export default function LoadingPictos({ icons = [], message = "Chargement…" }) {
+export default function LoadingPictos({ icons = [], message = "Chargement en cours…" }) {
   // Duplique la liste pour une boucle continue
   const roll = [...icons, ...icons];
 
@@ -10,7 +9,7 @@ export default function LoadingPictos({ icons = [], message = "Chargement…" })
           <img src={src} alt="" key={i} className="icon" loading="eager" />
         ))}
       </div>
-      <h3 className="msg">{message}</h3>
+      <h2 className="msg">{message}</h2>
     </div>
   );
 }

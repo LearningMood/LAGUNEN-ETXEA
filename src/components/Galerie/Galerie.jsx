@@ -96,7 +96,7 @@ const imagesToUse = useBackup || !photos?.length ? backupImages : photos;
               onClick={() => { setPhotoIndex(index); setIsOpen(true); }}
               onError={(e) => {
                 console.warn("Image KO:", e.currentTarget.src);
-                e.currentTarget.src = "/img/Lagunen-Etxea-location-Hendaye.jpg"; // un visuel par défaut
+                e.currentTarget.src = "/img/Lagunen-Etxea-location-Hendaye-chambre1-02.jpg"; // un visuel par défaut
               }}
             />
             {/* {p.legende && <figcaption className="caption">{p.legende}</figcaption>} */}
