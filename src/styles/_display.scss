@@ -3,12 +3,12 @@
 
 .display-grid {
     display: grid;
-    
+    justify-items: center;
     
     // chaque colonne fait au moins $min-item-size et au plus 1fr
     grid-template-columns: repeat(
         auto-fill,
-        minmax(v.$min-item-size, 1fr)
+        minmax(110px, 1fr)
     );
    
     @media (min-width: v.breakpoint(md)) {
@@ -24,4 +24,13 @@
         display: flex;
         justify-content: space-between;
     }
+}
+
+.full-flex-center {
+    background: v.$color;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
 }

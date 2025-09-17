@@ -1,28 +1,53 @@
 @use 'vars' as v;
 @import 'mixins';
-p {
+
+p, ul, ul li {
     color: v.$dark;
-    line-height: 2;
+    line-height: 2.1;
 }
-.txt-center{
+
+p.description{
+
+}
+.txt-center {
     text-align: center;
 }
+
 .txt-justify {
     text-align: justify;
 }
+
 .txt--lead {
     font-style: italic;
     font-size: 1.4rem;
     color: #908888;
 }
+
+.txt--avis{
+    margin-bottom: 1rem
+}
+
+.avis-note{
+    color: v.$color;
+}
+
+.txt-capitalize {
+    text-transform: capitalize;
+}
 // TARIFS
+@media (max-width: v.breakpoint(md)) {
+    ul {
+        padding-left: 10px
+    }
+}
+
 ul.infos li {
     margin-bottom: 1rem;
 }
 
 // QUESTIONS | RÉPONSES
 ul.questions {
-    
+
     li {
         margin-bottom: 2rem;
     }
@@ -33,9 +58,14 @@ ul.questions {
         color: v.$carmin;
         font-family: v.$titre;
     }
-    p.questions_reponse {
-        margin-left: 2rem;
+
+    @media(min-width: v.breakpoint(md)) {
+        p.questions_reponse {
+            margin-left: 2rem;
+        }
+
     }
+
 }
 
 // CONTACT

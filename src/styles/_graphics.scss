@@ -23,4 +23,11 @@
 .map {
     background-color: v.$dark;
     height: 500px;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.border--tiret {
+  border-bottom: dashed 1px #fff;
 }

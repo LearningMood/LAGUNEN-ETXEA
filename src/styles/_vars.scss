@@ -127,5 +127,8 @@ $container-padding-x: $grid-gutter-width !default;
 
 // PICTOS
 $gap: 1rem;
+@media(max-width: breakpoint(md)){
+  $min-item-size: 110px;    // taille minimale de chaque tuile
+}
 $min-item-size: 140px;    // taille minimale de chaque tuile
 $max-item-size: 160px;   // taille max souhaitée

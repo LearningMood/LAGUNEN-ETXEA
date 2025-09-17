@@ -11,8 +11,8 @@ function groupBy(arr, key) {
 }
 
 export default function Equipements({ header, items = [] }) {
-  const titre = header?.titre || "Équipements";
-  const description = header?.description || "Ce que propose le logement";
+  const titre = header?.titre || "Les équipements";
+  const description = header?.description || "Retrouvez la liste des équipements mis à votre disposition pour un séjour le plus agréable possible.";
 
   if (!items.length) {
     return (
@@ -32,22 +32,21 @@ export default function Equipements({ header, items = [] }) {
 
       {description && <ParagrapheCenter texte={description} />}
 
-      <div className="space-y-8">
+      <div>
         {Object.entries(groups).map(([cat, list]) => (
           <div key={cat}>
-            {cat !== "Divers" && <h3 className="font-semibold mb-3">{cat}</h3>}
-            <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+            {cat !== "Divers" && <h3>{cat}</h3>}
+            <ul>
               {list.map((e, i) => (
-                <li key={`${cat}-${i}`} className="flex items-center gap-3 p-3 rounded-xl border bg-white">
+                <li key={`${cat}-${i}`}>
                   <img
                     src={`/pictos/${e.picto}.svg`}
                     alt={e.alt || e.label}
-                    width={28}
-                    height={28}
-                    className="shrink-0"
+                    // width={28}
+                    // height={28}
                     onError={(ev) => { ev.currentTarget.src = "/pictos/baignoire.svg"; }}
                   />
-                  <span className="text-sm">{e.label}</span>
+                  <span>{e.label}</span>
                 </li>
               ))}
             </ul>

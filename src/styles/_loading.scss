@@ -1,0 +1,24 @@
+@use 'vars' as v;
+.loader-wrap {
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  min-height: 60vh; gap: 18px;
+  background-color: v.$color;
+}
+.loader-wrap .msg { font-size: 0.95rem; color:#666; }
+
+.marquee {
+  position: relative; width: min(820px, 92vw); height: 64px; overflow: hidden;
+  mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+}
+.marquee .icon {
+  width:42px; height:42px; margin: 0 22px; opacity: .9;
+  filter: drop-shadow(0 0 0 rgba(0,0,0,0));
+}
+.marquee {
+  display:flex; align-items:center;
+  animation: marquee-move 16s linear infinite;
+}
+@keyframes marquee-move {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); } /* car on a dupliqué la liste */
+}

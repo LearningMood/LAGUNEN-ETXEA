@@ -1,6 +1,8 @@
-function ParagrapheCenter({ texte}) {
+function ParagrapheCenter({ texte }) {
     return (
-        <p className="description txt-center" dangerouslySetInnerHTML={{ __html: texte }} />
+        <div className="bloc-description">
+            <p className="description" dangerouslySetInnerHTML={{ __html: texte }} />
+        </div>
     )
 }
 export default ParagrapheCenter;

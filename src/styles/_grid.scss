@@ -5,17 +5,33 @@
     @media (min-width: v.breakpoint(md)) {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 1rem; 
+        gap: 1rem;
     }
 }
 
 .line {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 2rem;
+    display: block;
 
     .col-50 {
-        width: 50%;
+        margin-top: 2rem;
     }
+
+    @media (min-width: v.breakpoint(md)) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+
+        .col-50 {
+            margin-top: 0;
+            width: 50%;
+        }
+    }
+}
+
+.line--center {
+    align-items: center;
+}
+.line--start {
+    justify-content: flex-start;
 }

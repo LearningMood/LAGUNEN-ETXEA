@@ -53,9 +53,11 @@
     // max-height: 600px;
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; 
+
+
     @media (min-width: v.breakpoint(md)) {
         height: 100vh;
+        background-attachment: fixed; 
     }
 }
 .bandeau--texte {

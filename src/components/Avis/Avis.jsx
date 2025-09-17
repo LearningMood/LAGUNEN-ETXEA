@@ -16,7 +16,7 @@ function Stars({ n = 0 }) {
   const v = Math.max(0, Math.min(10, Number(n) || 0));      // vote sur 10
   const full = Math.round(v / 2);                            // étoiles sur 5
   return (
-    <span aria-label={`${v}/10`}>
+    <span className="avis-note" aria-label={`${v}/10`}>
       {"★".repeat(full)}{"☆".repeat(5 - full)}
     </span>
   );
@@ -71,15 +71,15 @@ export default function Avis({ header, items = [] }) {
       <Slider {...settings}>
         {slides.map((av, i) => (
           <blockquote key={i} className="avis-slide">
-            {av.titre && <h3 className="font-medium">{av.titre}</h3>}
-            <p className="description">“{av.texte}”</p>
+            {av.titre && <h3 className="titre--avis">{av.titre}</h3>}
+            <p className="txt--avis">“{av.texte}”</p>
             <footer>
               <Stars n={av.vote} />
               <span> • </span>
               <span>{av.auteur}</span>
               {av.date && <>
                 <span> • </span>
-                <time dateTime={av.date}>{av.date}</time>
+                <time dateTime={av.date} className="txt-capitalize">{av.date}</time>
               </>}
             </footer>
           </blockquote>

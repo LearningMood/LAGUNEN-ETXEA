@@ -10,7 +10,7 @@ export function normalizeAll(data) {
     return acc;
   }, {});
 
-  console.log('Dans Normalize : ', data);
+  // console.log('Dans Normalize : ', data);
 
   const photos = arr(data.photos)
     .filter(p => p.url)                // seulement si url non vide
