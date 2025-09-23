@@ -18,6 +18,7 @@ import Footer from "./Footer/Footer.jsx";
 import Contact from "./Contact/Contact.jsx";
 
 
+
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -71,6 +72,8 @@ export default function App() {
     const sectionAvis = sections.find?.(s => s.section === "avis") || null;
     const sectionEmplacement = sections.find?.(s => s.section === "emplacement") || null;
     const sectionEquipements = sections.find?.(s => s.section === "equipements") || null;
+
+
 
     return (
         <div className="app">
