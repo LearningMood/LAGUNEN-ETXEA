@@ -44,6 +44,10 @@ p.description{
 ul.infos li {
     margin-bottom: 1rem;
 }
+ul.infos li strong {
+    font-family: v.$titre;
+    color: v.$color;
+}
 
 // QUESTIONS | RÉPONSES
 ul.questions {

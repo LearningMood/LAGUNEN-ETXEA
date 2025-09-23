@@ -1,22 +1,32 @@
 @use 'vars' as v;
+
 .tableau-tarifs {
+    font-family: v.$titre-sans;
     margin-bottom: 3rem;
     width: 100%;
-  overflow-x: auto;
+    overflow-x: auto;
 }
+
 table {
     border-collapse: collapse;
     width: 100%;
     text-align: center;
-    background-color:rgb(255 250 255 / 63%);
+    background-color: rgb(255 250 255 / 63%);
 }
-tr, td, th {
+
+table td {
+    font-family: v.$titre-sans;
+}
+
+tr,
+td,
+th {
     border: solid 1px lighten(v.$color, 40%);
     padding: 1rem 1rem;
 }
+
 th {
     background-color: lighten(v.$color, 30%);
     color: #fff;
-    text-transform: uppercase;
+    font-family: v.$titre;
 }
-

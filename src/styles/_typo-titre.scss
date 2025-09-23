@@ -13,12 +13,14 @@ h6 {
 
 .titre-section {
   padding: 0 4rem;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   // color: v.$basque;
   position: relative;
   text-align: center;
 
   @media(max-width: v.breakpoint(md)) {
+    padding: 0 4rem;
+    font-size: 1.8rem;
     @include filet();
   }
 }
