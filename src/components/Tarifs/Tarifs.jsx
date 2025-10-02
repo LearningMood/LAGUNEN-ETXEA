@@ -28,10 +28,8 @@ export default function Tarifs({ header, rows = [], infos }) {
               <th>Saison</th>
               <th>Nuit (€)</th>
               <th>Semaine (€)</th>
-              <th>Du</th>
-              <th>Au</th>
+              <th>Périodes</th>
               <th>Min. nuits</th>
-              <th>Note</th>
             </tr>
           </thead>
           <tbody>
@@ -40,9 +38,8 @@ export default function Tarifs({ header, rows = [], infos }) {
                 <td>{r.saison}</td>
                 <td>{r.prix_nuit ?? ''}</td>
                 <td>{r.prix_we ?? ''}</td>
-                <td>{f(r.start_date)}</td>
-                <td>{f(r.end_date)}</td>
-                <td>{r.min_nuits ?? ''}</td>
+                <td>Du {f(r.start_date)} au {f(r.end_date)}</td>
+                {/* <td>{r.min_nuits ?? ''}</td> */}
                 <td>{r.note || ''}</td>
               </tr>
             ))}
