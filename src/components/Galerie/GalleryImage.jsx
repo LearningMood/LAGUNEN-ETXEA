@@ -1,7 +1,3 @@
-// ================================================
-// 4. components/Gallery/GalleryImage.jsx
-// ================================================
-
 import { useState, useCallback } from 'react';
 
 export default function GalleryImage({ 
@@ -18,7 +14,7 @@ export default function GalleryImage({
   }, [onClick, index]);
   
   const handleError = useCallback((e) => {
-    console.warn(`X Erreur image: ${image.legende}`);
+    console.warn(`Zut, erreur image: ${image.legende}`);
     setHasError(true);
     setIsLoading(false);
     
@@ -54,12 +50,6 @@ export default function GalleryImage({
         onLoad={handleLoad}
       />
       
-      {/* Indicateur de source en dev */}
-      {process.env.NODE_ENV === 'development' && (
-        <span className="image-source">
-          {image.isBackup ? '📁' : '☁️'}
-        </span>
-      )}
     </figure>
   );
 }
