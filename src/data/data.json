@@ -1,0 +1,628 @@
+{
+  "fromCache": false,
+  "data": {
+    "site_meta": [
+      {
+        "key": "titre_site",
+        "value": "Lagunen Etxea"
+      },
+      {
+        "key": "bandeau_image_url",
+        "value": "/img/cover-Lagunen-Etxea-location-Hendaye-terrasse.jpg"
+      },
+      {
+        "key": "contact",
+        "value": "Guillaume"
+      },
+      {
+        "key": "adresse",
+        "value": "64700 Hendaye"
+      },
+      {
+        "key": "telephone",
+        "value": "+33603163199 "
+      },
+      {
+        "key": "email",
+        "value": "guillermo.tirloy@hotmail.com"
+      },
+      {
+        "key": "max-invites",
+        "value": 6
+      }
+    ],
+    "sections_meta": [
+      {
+        "section": "intro",
+        "titre": "Bienvenue",
+        "description": "Vous êtes ici chez vous ! Sentez-vous bien comme à la maison, il y aura toujours quelques rafraîchissements pour votre arrivée et tout le matériel qu'il vous faut pour cuisiner. À seulement 1,5 km de la plage, dans une impasse très calme et sans vis à vis, vous pourrez profiter d'un moment paisible après une journée de plage ou de randonnée en montagne.",
+        "ordre": 1
+      },
+      {
+        "section": "logement",
+        "titre": "Le logement",
+        "description": "Cette ancienne maison basque des années 1960 a été entièrement rénovée en 2023. La maison est composée de 3 étages, tous totalement indépendants. Les propriétaires vivent au 1er et 2ème étages. L'appartement en location est au rez-de-jardin, avec son accès indépendant, son parking pour 2 voitures et son bout de jardin pour se poser ou jouer en famille.",
+        "ordre": 2
+      },
+      {
+        "section": "emplacement",
+        "titre": "L'emplacement",
+        "description": "Hendaye, Nouvelle-Aquitaine, France\nMaison située dans une impasse, dans un quartier très calme. A seulement 1,5 km de la plage, accessible à pied en 15-20 min.",
+        "ordre": ""
+      },
+      {
+        "section": "remarques",
+        "titre": "Remarques",
+        "description": "Le linge de maison est fourni : draps et serviettes de bain, gel douche et shampoing aussi.\nVous trouverez toujours de quoi prendre votre premier petit déjeuner en arrivant : café / Thé / confiture / brioche ou votre premier repas de base (pâtes, riz, sauce tomate, condiments, ... ) ... pas de stress de faire les courses avant d'arriver, vous aurez le temps de le faire sur place ! Reposez-vous, vous êtes là pour cela !!\nChaque chambre est équipée de volets en bois (traditionnel basque).\nDeux chambres sont orientées au Nord donnant sur le jardinet devant la maison : la chambre parental de 12 m² et la chambre avec 2 lits simples de 9 m² . La 3° chambre de 10 m² est orientée Sud et donne sur la jardin, elle possède un petit bureau pour y travailler paisiblement.\nLe salon / cuisine sont orientés Sud et la terrasse / jardin aussi ... vous pourrez apprécier la vue sur la Rhune et le petit bois au fond du jardin. Idéal pour se reposer !",
+        "ordre": ""
+      },
+      {
+        "section": "tarif",
+        "titre": "Tarifs & disponibilités",
+        "description": "Toutes les informations utiles avant de réserver.",
+        "ordre": 3
+      },
+      {
+        "section": "transport",
+        "titre": "Pour se déplacer autour d'Hendaye",
+        "description": "La gare TGV d'Hendaye est à 7 min en voiture, avec un arrêt pour les TER à seulement 3 min en voiture et 10 min à pied. Parfait pour passer la journée sur San Sebastian en Espagne, Biarritz ou Bayonne, sans s'encombrer de la voiture !",
+        "ordre": ""
+      },
+      {
+        "section": "equipements",
+        "titre": "Les équipements",
+        "description": "Retrouvez la liste des équipements mis à votre disposition pour un séjour le plus agréable possible.",
+        "ordre": ""
+      },
+      {
+        "section": "faq",
+        "titre": "Questions fréquentes",
+        "description": "Nous nous efforçons de répondre aux questions que vous pouvez vous poser. Si votre question ne figure pas parmi la liste ci-dessous, envoyez-nous un message !",
+        "ordre": 4
+      },
+      {
+        "section": "avis",
+        "titre": "Les avis",
+        "description": "C’est vous qui en parlez le mieux !",
+        "ordre": 5
+      },
+      {
+        "section": "contact",
+        "titre": "Contact",
+        "description": "Joignez-nous facilement",
+        "ordre": 6
+      }
+    ],
+    "tarif": [
+      {
+        "saison": "Basse saison (hiver, sauf vacances scolaires)",
+        "prix_nuit": 150,
+        "prix_we": 1000,
+        "start_date": "2025-11-03",
+        "end_date": "2025-04-30",
+        "min_nuits": 2,
+        "note": "Location minimum de 2 nuits"
+      },
+      {
+        "saison": "Inter saison (automne - printemps et vacances scolaires)",
+        "prix_nuit": 180,
+        "prix_we": 1200,
+        "start_date": "2025-05-01",
+        "end_date": "2025-06-15",
+        "min_nuits": 2,
+        "note": "De septembre à juin : location minimum 2 à 3 nuits (selon période)"
+      },
+      {
+        "saison": "Pleine saison (juillet - août)",
+        "prix_nuit": 260,
+        "prix_we": 1800,
+        "start_date": "2025-06-30",
+        "end_date": "2025-08-31",
+        "min_nuits": 7,
+        "note": "Location à la semaine, du samedi au samedi."
+      }
+    ],
+    "tarif_infos": [
+      {
+        "key": "inclus",
+        "value": "Les draps et les serviettes de toilette sont inclus."
+      },
+      {
+        "key": "menage",
+        "value": "Un forfait ménage de 60 euros, réalisé par des professionnels, est compris dans le prix, pour tout séjour, quelle qu'en soit la durée."
+      },
+      {
+        "key": "non_inclus",
+        "value": "Il s'agit d'un ngite (et non d'une maison d'hôtes) : les petits-déjeuners et repas ne sont pas inclus."
+      },
+      {
+        "key": "periodes",
+        "value": "De septembre à juin : location minimum 2 à 3 nuits (selon période). Juillet / Août : location à la semaine du samedi au samedi."
+      },
+      {
+        "key": "note",
+        "value": "La taxe de séjour (Hendaye 2025) se calcule selon le nombre de nuits et le nombre de personnes présentes lors du séjour. Vous ne payez aucun frais supplémentaire en réservant en direct."
+      }
+    ],
+    "remarques": [
+      {
+        "description": "",
+        "col_1": "picto.svg",
+        "col_2": "Appartement indépendant; \nProfitez de 65 m2 de plain-pied en rez-de-jardin avec entrée indépendante;",
+        "col_3": "picto.svg",
+        "col_4": "Terrasse et jardins privatifs;\n500 m2 de verdure vous sont entièrement réservés",
+        "col_5": "picto.svg",
+        "col_6": "Gîte pour 6 personnes;\nT3 composé de 3 chambres avec couchages modulaires (lits simples ou doubles sur demande), une cuisine tout équipée, un salon, deux salles de bain, un WC",
+        "col_7": "picto.svg",
+        "col_8": "Tout est inclus;\nLe linge de lit et les serviettes de toilettes sont fournis, ainsi que quelques produits de base pour votre première nuit",
+        "col_9": "picto.svg",
+        "id": "TV et Wifi gratuit;\nTV et wifi gratuit, espace bureau dans l’une des chambres",
+        "section": "",
+        "titre": ""
+      }
+    ],
+    "equipements": [
+      {
+        "label": "Bouilloire",
+        "picto": "bouilloire",
+        "alt": "",
+        "ordre": "",
+        "actif": true
+      },
+      {
+        "label": "Cafetière",
+        "picto": "cafetiere",
+        "alt": "",
+        "ordre": "",
+        "actif": true
+      },
+      {
+        "label": "Chauffage",
+        "picto": "chauffage",
+        "alt": "",
+        "ordre": "",
+        "actif": true
+      },
+      {
+        "label": "Cuisine",
+        "picto": "cuisine",
+        "alt": "",
+        "ordre": 6,
+        "actif": true
+      },
+      {
+        "label": "Draps",
+        "picto": "draps",
+        "alt": "",
+        "ordre": "",
+        "actif": true
+      },
+      {
+        "label": "Eau chaude",
+        "picto": "eau-chaude",
+        "alt": "",
+        "ordre": "",
+        "actif": true
+      },
+      {
+        "label": "Entrée privée",
+        "picto": "entree-privee",
+        "alt": "",
+        "ordre": "",
+        "actif": true
+      },
+      {
+        "label": "Équipement de base",
+        "picto": "equipement-base",
+        "alt": "",
+        "ordre": "",
+        "actif": true
+      },
+      {
+        "label": "Vue sur la montagne",
+        "picto": "vue-montagne",
+        "alt": "",
+        "ordre": 1,
+        "actif": false
+      },
+      {
+        "label": "Étendoir",
+        "picto": "etendoir",
+        "alt": "",
+        "ordre": "",
+        "actif": true
+      },
+      {
+        "label": "Four micro-ondes",
+        "picto": "four-micro-ondes",
+        "alt": "",
+        "ordre": "",
+        "actif": true
+      },
+      {
+        "label": "Four",
+        "picto": "four",
+        "alt": "",
+        "ordre": "",
+        "actif": true
+      },
+      {
+        "label": "Grille-pain",
+        "picto": "grille-pain",
+        "alt": "",
+        "ordre": "",
+        "actif": true
+      },
+      {
+        "label": "Lave-linge",
+        "picto": "lave-linge",
+        "alt": "",
+        "ordre": 4,
+        "actif": true
+      },
+      {
+        "label": "Lave-vaisselle",
+        "picto": "lave-vaisselle",
+        "alt": "",
+        "ordre": "",
+        "actif": true
+      },
+      {
+        "label": "Mobilier extérieur",
+        "picto": "mobilier-exterieur",
+        "alt": "",
+        "ordre": "",
+        "actif": true
+      },
+      {
+        "label": "Stationnement gratuit",
+        "picto": "parking",
+        "alt": "",
+        "ordre": "",
+        "actif": true
+      },
+      {
+        "label": "Placard",
+        "picto": "placard",
+        "alt": "",
+        "ordre": "",
+        "actif": true
+      },
+      {
+        "label": "Plaque de cuisson",
+        "picto": "plaque",
+        "alt": "",
+        "ordre": "",
+        "actif": true
+      },
+      {
+        "label": "Réfrigérateur",
+        "picto": "refrigerateur",
+        "alt": "",
+        "ordre": "",
+        "actif": true
+      },
+      {
+        "label": "Savon",
+        "picto": "savon",
+        "alt": "",
+        "ordre": "",
+        "actif": true
+      },
+      {
+        "label": "Shampoing",
+        "picto": "shampoing",
+        "alt": "",
+        "ordre": 11,
+        "actif": true
+      },
+      {
+        "label": "Table à manger",
+        "picto": "table",
+        "alt": "",
+        "ordre": "",
+        "actif": true
+      },
+      {
+        "label": "Télévision",
+        "picto": "television",
+        "alt": "",
+        "ordre": 8,
+        "actif": true
+      },
+      {
+        "label": "Vaisselle",
+        "picto": "vaisselle",
+        "alt": "",
+        "ordre": "",
+        "actif": true
+      },
+      {
+        "label": "Wi-Fi gratuit",
+        "picto": "wifi",
+        "alt": "Icône Wi-Fi",
+        "ordre": 2,
+        "actif": true
+      },
+      {
+        "label": "Espace de travail dédié",
+        "picto": "espace-travail-dedie",
+        "alt": "espace-travail-dedie",
+        "ordre": 7,
+        "actif": false
+      },
+      {
+        "label": "Sèche-cheveux",
+        "picto": "seche-cheveux",
+        "alt": "",
+        "ordre": 13,
+        "actif": false
+      }
+    ],
+    "photos": [
+      {
+        "url": "https://lh3.googleusercontent.com/d/1rb5sJpDtGHdhS6cXj5cMH38G_miWkAd7",
+        "legende": "Terrasse avec jardin privatif",
+        "ordre": 1
+      },
+      {
+        "url": "https://lh3.googleusercontent.com/d/1I3kqfB_zVoj7PO129AkDmi_pLj-kcjo5",
+        "legende": "Terrasse avec jardin privatif",
+        "ordre": 2
+      },
+      {
+        "url": "https://lh3.googleusercontent.com/d/1MGlUijfMqhXyQFpyEZEOc0q5X8xBESB0",
+        "legende": "Terrasse avec jardin privatif",
+        "ordre": 3
+      },
+      {
+        "url": "https://lh3.googleusercontent.com/d/1F6v-bI7c09ITWouh4IiEP6Pd2-zRwJKV",
+        "legende": "Terrasse avec jardin privatif",
+        "ordre": 4
+      },
+      {
+        "url": "https://lh3.googleusercontent.com/d/1SvMA-U97LKQDoPOL9hVOanKZnms12-j_",
+        "legende": "Terrasse avec jardin privatif",
+        "ordre": 5
+      },
+      {
+        "url": "https://lh3.googleusercontent.com/d/1ah3YILFcoWuYqHxgP4qD1t2DMkBDIenT",
+        "legende": "Terrasse avec jardin privatif",
+        "ordre": 6
+      },
+      {
+        "url": "https://lh3.googleusercontent.com/d/1W8Mo5Xqo0ewzmo7bOoMDw8QlFWiJ-LNm",
+        "legende": "Terrasse avec jardin privatif",
+        "ordre": 7
+      },
+      {
+        "url": "https://lh3.googleusercontent.com/d/1BtefZxmPQYXH40aWZvuDqmf1KiiRp0Pr",
+        "legende": "Terrasse avec jardin privatif",
+        "ordre": 8
+      },
+      {
+        "url": "https://lh3.googleusercontent.com/d/10CxohUOkfYBiQI17-ACKx6p-Vq0E3B5w",
+        "legende": "Terrasse avec jardin privatif",
+        "ordre": 9
+      },
+      {
+        "url": "https://lh3.googleusercontent.com/d/12fJBeqIcl39roMm03519b4I6yfaDX6Bm",
+        "legende": "Terrasse avec jardin privatif",
+        "ordre": 10
+      },
+      {
+        "url": "https://lh3.googleusercontent.com/d/1fFTshn8aqzYNLtgcj5vRNcxCKH-90W0L",
+        "legende": "Terrasse avec jardin privatif",
+        "ordre": 11
+      },
+      {
+        "url": "https://lh3.googleusercontent.com/d/1CXnac5xrZDBQPxUzlXzI04odPGDVhCnJ",
+        "legende": "Terrasse avec jardin privatif",
+        "ordre": 12
+      },
+      {
+        "url": "https://lh3.googleusercontent.com/d/15qPaAoyjf0aNDhvy370qo2zUH8tXR_Cm",
+        "legende": "Terrasse avec jardin privatif",
+        "ordre": 13
+      },
+      {
+        "url": "https://lh3.googleusercontent.com/d/1hMn01-2Yh3ST6I9-RcsKH35EfEODG6fb",
+        "legende": "Terrasse avec jardin privatif",
+        "ordre": 14
+      },
+      {
+        "url": "https://lh3.googleusercontent.com/d/1emxggI_iRuyL6Uci_lI4AS05PGCeods4",
+        "legende": "Terrasse avec jardin privatif",
+        "ordre": 15
+      },
+      {
+        "url": "https://lh3.googleusercontent.com/d/1sMMM-QNd038IhTWgSWtGGIB7V62x8uch",
+        "legende": "Terrasse avec jardin privatif",
+        "ordre": 16
+      },
+      {
+        "url": "https://lh3.googleusercontent.com/d/1A6GxkiybwvAkOr1wSJncLxAf-8fO79JF",
+        "legende": "Terrasse avec jardin privatif",
+        "ordre": 17
+      },
+      {
+        "url": "https://lh3.googleusercontent.com/d/1rxyrdlZZ_BlB2gJ9h4Z7gZkuvKhZHtlZ",
+        "legende": "Terrasse avec jardin privatif",
+        "ordre": 18
+      },
+      {
+        "url": "https://lh3.googleusercontent.com/d/1s33Fq-CPNBX8ixk8FzRijZtQrVcKpoV3",
+        "legende": "Terrasse avec jardin privatif",
+        "ordre": 19
+      },
+      {
+        "url": "https://lh3.googleusercontent.com/d/1NOAyhBdjODPID9_VIFfS_-cl4t75U52B",
+        "legende": "Terrasse avec jardin privatif",
+        "ordre": 20
+      },
+      {
+        "url": "https://lh3.googleusercontent.com/d/18d2q5Ve4cJG6IzSV0d6vs1ugLtvTQF3s",
+        "legende": "Terrasse avec jardin privatif",
+        "ordre": 21
+      },
+      {
+        "url": "https://lh3.googleusercontent.com/d/1i2nrkSiQECuKIqtew5rVht8CYDYd_GEo",
+        "legende": "Terrasse avec jardin privatif",
+        "ordre": 22
+      },
+      {
+        "url": "https://lh3.googleusercontent.com/d/1RDhJcZwHUH_Xqc-f_naJELUWhNfP-iC0",
+        "legende": "Terrasse avec jardin privatif",
+        "ordre": 23
+      },
+      {
+        "url": "https://lh3.googleusercontent.com/d/1xCKaqL9Qxi_Iv77eSCnB6W0WCLk_MjYo",
+        "legende": "Terrasse avec jardin privatif",
+        "ordre": 24
+      }
+    ],
+    "avis": [
+      {
+        "auteur": "Thierry",
+        "titre": "Logement très confortable et calme pour 5/6 personnes",
+        "texte": "Logement très calme et lumineux, aménagement du logement bien conçu avec une grande pièce à vivre et 3 chambres séparées avec des vrais lits et non des lits superposés ou des canapés pliants. Equipement ménager complet et de bonne qualité (plaques à induction, toaster, frigo/congélateur, four, micro-ondes, cafetière à dosettes et cafetière à filtre,...).Canapé très confortable dans le séjour, très utile en cas d'insomnies, avec un grand plaid douillet.Terrasse couverte très pratique pour laisser vêtements et serviettes de plage à sécher, ainsi que stocker les chaussures. Hôte prévenant et chaleureux.",
+        "date": "2025-08-01",
+        "vote": 9,
+        "avis": ""
+      },
+      {
+        "auteur": "Benjamin",
+        "titre": "Exceptionnel !",
+        "texte": "Logement très propre, confortable. À 5 minutes en voiture de la plage, 20 minutes à pieds.\nLes équipements sont tout à fait conformes à ce qui est stipulé. L'hôte est très accueillant et prévenant. Je recommande vivement.",
+        "date": "2025-07-01",
+        "vote": 10,
+        "avis": ""
+      },
+      {
+        "auteur": "Damien",
+        "titre": "Exceptionnel !",
+        "texte": "Exceptionnel. Un petit mot sur la table accompagné de petites boissons de bienvenue dans le frigo. De quoi prendre un petit déjeuné si nous n'avions rien prévu. Top. Damien - Juin 2025",
+        "date": "2025-06-01",
+        "vote": 10,
+        "avis": ""
+      },
+      {
+        "auteur": "Tournier",
+        "titre": "Parfait",
+        "texte": "Parfait. Emplacement très calme, bien situé pour les visites.",
+        "date": "2025-06-01",
+        "vote": 9,
+        "avis": ""
+      }
+    ],
+    "transport": [
+      {
+        "section": "Train TER",
+        "titre": "Gare Les Deux Jumeaux (TER) 700m. La gare TGV d'Hendaye est à 7 min en voiture, avec un arrêt pour les TER à seulement 3 min en voiture et 10 min à pied. Parfait pour passer la journée sur San Sebastian en Espagne, Biarritz ou Bayonne, sans s'encombrer de la voiture !"
+      },
+      {
+        "section": "Train TGV",
+        "titre": "Gare d'Hendaye (TGV - TER) 3,1km"
+      },
+      {
+        "section": "Bus",
+        "titre": "Ligne de bus 4, (arrêt à 5 min à pied)"
+      }
+    ],
+    "map_meta": [
+      {
+        "key": "map_provider",
+        "value": "google"
+      },
+      {
+        "key": "map_url",
+        "value": "https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d6826.870340250153!2d-1.7558981783261174!3d43.36981252646355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2sfr!4v1758098226724!5m2!1sfr!2sfr\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade"
+      },
+      {
+        "key": "lat",
+        "value": "43.3701"
+      },
+      {
+        "key": "lng",
+        "value": "-1.7657"
+      },
+      {
+        "key": "zoom",
+        "value": 14
+      }
+    ],
+    "emplacement": [
+      {
+        "col_0": "Où se situe le logement ?"
+      },
+      {
+        "col_0": "Hendaye, Nouvelle-Aquitaine, France Maison située dans une impasse, dans un quartier très calme. A seulement 1,5 km de la plage, accessible à pied en 15-20 min."
+      },
+      {
+        "col_0": "Se déplacer"
+      },
+      {
+        "col_0": "La gare TGV d'Hendaye est à 7 min en voiture, avec un arrêt pour les TER à seulement 3 min en voiture et 10 min à pied. Parfait pour passer la journée sur San Sebastian en Espagne, Biarritz ou Bayonne, sans s'encombrer de la voiture !"
+      }
+    ],
+    "faq": [
+      {
+        "id": "faq",
+        "section": "faq",
+        "titre": "Questions fréquentes",
+        "description": "",
+        "questions": [
+          {
+            "question": "Quelle est la durée minimale de séjour ?",
+            "reponse": "Nous vous accueillerons toute l'année aux dates de votre choix pour une durée minimale de deux ou trois nuits selon la période. Durant les mois de Juillet et Août, les locations à la semaine du samedi au samedi sont privilégiées."
+          },
+          {
+            "question": "Quels sont les horaire d'arrivée et de départ ?",
+            "reponse": "Le gîte est disponible à partir de 16h et doit être laissé libre pour 11h. Ces horaires sont flexibles en fonction de l’occupation du gîte. Merci de nous communiquer votre horaire précis d'arrivée, afin de vous accueillir au mieux."
+          },
+          {
+            "question": "Puis-je arriver de façon autonome ?",
+            "reponse": "Si vous souhaitez arriver en toute autonomie, une boite à clefs est disponible sur place sur demande."
+          },
+          {
+            "question": "Quels sont les produits inclus dans la location ?",
+            "reponse": "Le linge de lit et les serviettes de toilette sont fournis ainsi que les oreillers, couettes et couverture. Quelques produits de base sont également fournis pour votre première nuit : savon, shampoing, papier wc, mais également café, thé et condiments de base. Ensuite, à vous de faire les courses pour votre séjour."
+          },
+          {
+            "question": "Le ménage est-il inclus ?",
+            "reponse": "Un forfait ménage est compris quelque soit la durée de votre séjour et est effectué par des professionnels."
+          },
+          {
+            "question": "Le petit déjeuner et repas sont-ils compris dans la location ?",
+            "reponse": "Lagunen Etxea n'est pas une maison d'hôte et ne propose pas de prestation de restauration."
+          },
+          {
+            "question": "Les animaux de companie sont-il acceptés ?",
+            "reponse": "Non, nous n'accueillons pas les animaux de compagnie, quelle que soit leur taille."
+          },
+          {
+            "question": "L'appartement bénéficie-t-il d'un accès indépendant ?",
+            "reponse": "Le gîte est un appartement entièrement indépendant au rdc d'une maison basque.Vous disposez d'une entrée dédiée ainsi qu'une terrasse et d'un jardin privatifs. Nous habitons sur place, à l'étage de la maison, mais possédons notre entrée séparée et notre jardin dédié."
+          },
+          {
+            "question": "Le stationnement est-il prévu ?",
+            "reponse": "Un parking non couvert vous est réservé (2 voitures possibles). À noter que la maison dispose d’un petit abri qui vous permettra de garer vos vélos et autres équipements."
+          },
+          {
+            "question": "Combien de couchages sont disponibles ?",
+            "reponse": "Conformément à la politique d'assurance, le gîte peut accueillir six personnes maximum. Les draps sont fournis."
+          },
+          {
+            "question": "Quels équipements sont mis à disposition ?",
+            "reponse": "Pour vous simplifier les vacances, le gîte est équipé d'un lave vaisselle, réfrigérateur, four, plaques à induction, micro ondes, cafetière à mono dose et cafetière à filtre, grille pain. Mais également d'un lave linge, étendoirs, télévision, lecteur dvd, sèche cheveux, fer et table à repasser, matériel de ménage. Un barbecue est à votre disposition. La cuisine est bien équipée en ustensiles et en vaisselle pour vous permettre de cuisiner à volonté. Le gîte est équipé de chauffages électriques récents et entretenus."
+          },
+          {
+            "question": "Le gîte est-il adapté aux enfants ?",
+            "reponse": "Absolument ! Le jardin est idéal pour les parties de foot. La table familiale, le lave linge et les différents espaces sont pensés pour des vacances en famille.\nLa terrasse est clôturée pour plus de sécurité mais votre surveillance dans le jardin reste nécessaire.\nPour les jeunes enfants, nous mettons à votre disposition une chaise haute, une baignoire bébé et un lit parapluie sur demande.\nPensez à apporter leurs draps et doudous."
+          }
+        ]
+      }
+    ],
+    "contact": []
+  }
+}

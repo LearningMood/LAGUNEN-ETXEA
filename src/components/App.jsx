@@ -7,7 +7,7 @@ import Header from "./Header/Header.jsx";
 import Nav from "./Header/Nav.jsx";
 import Intro from "./Intro/Intro.jsx";
 import Logement from "./Logement/Logement.jsx";
-import Galerie from "./Galerie/Galerie.jsx";
+import Galerie from "./Galerie/Index.jsx";
 import Remarques from "./Remarques/Remarques.jsx";
 import Tarifs from "./Tarifs/Tarifs.jsx";
 import Emplacement from "./Emplacement/Emplacement.jsx";

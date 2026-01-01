@@ -2,6 +2,63 @@
 @import 'mixins';
 
 .mosaique {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+  padding: 20px 0;
+}
+
+.mosaique-img {
+  position: relative;
+  margin: 0;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #f5f5f5;
+  aspect-ratio: 4/3;
+}
+
+.photo-thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.photo-thumbnail.loading {
+  opacity: 0;
+}
+
+.mosaique-img:hover .photo-thumbnail {
+  transform: scale(1.05);
+}
+
+.image-placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f0f0f0;
+}
+
+.gallery-debug {
+  padding: 8px;
+  background: #f0f0f0;
+  border-radius: 4px;
+  font-size: 12px;
+  margin-bottom: 16px;
+}
+
+.no-photos {
+  text-align: center;
+  padding: 40px;
+  color: #666;
+}
+
+// 
+
+.mosaique {
     align-items: normal;
     display: flex;
     flex-wrap: wrap;
@@ -31,3 +88,4 @@
         }
     }
 }
+
