@@ -34,7 +34,7 @@
     "sections_meta": [
       {
         "section": "intro",
-        "titre": "Bienvenue",
+        "titre": "Bienvenue !!",
         "description": "Vous êtes ici chez vous ! Sentez-vous bien comme à la maison, il y aura toujours quelques rafraîchissements pour votre arrivée et tout le matériel qu'il vous faut pour cuisiner. À seulement 1,5 km de la plage, dans une impasse très calme et sans vis à vis, vous pourrez profiter d'un moment paisible après une journée de plage ou de randonnée en montagne.",
         "ordre": 1
       },
@@ -129,11 +129,11 @@
       },
       {
         "key": "menage",
-        "value": "Un forfait ménage de 60 euros, réalisé par des professionnels, est compris dans le prix, pour tout séjour, quelle qu'en soit la durée."
+        "value": "Un forfait ménage, réalisé par des professionnels, n'est pas compris dans le prix. 60 € pour un séjour inférieur à 5 nuits. 100 € pour tout séjour supérieur à 5 nuits. "
       },
       {
         "key": "non_inclus",
-        "value": "Il s'agit d'un ngite (et non d'une maison d'hôtes) : les petits-déjeuners et repas ne sont pas inclus."
+        "value": "Il s'agit d'un gite (et non d'une maison d'hôtes) : les petits-déjeuners et repas ne sont pas inclus."
       },
       {
         "key": "periodes",
@@ -141,7 +141,7 @@
       },
       {
         "key": "note",
-        "value": "La taxe de séjour (Hendaye 2025) se calcule selon le nombre de nuits et le nombre de personnes présentes lors du séjour. Vous ne payez aucun frais supplémentaire en réservant en direct."
+        "value": "La taxe de séjour (Hendaye 2026) se calcule selon le nombre de nuits et le nombre de personnes présentes lors du séjour. Vous ne payez aucun frais supplémentaire en réservant en direct."
       }
     ],
     "remarques": [
@@ -152,7 +152,7 @@
         "col_3": "picto.svg",
         "col_4": "Terrasse et jardins privatifs;\n500 m2 de verdure vous sont entièrement réservés",
         "col_5": "picto.svg",
-        "col_6": "Gîte pour 6 personnes;\nT3 composé de 3 chambres avec couchages modulaires (lits simples ou doubles sur demande), une cuisine tout équipée, un salon, deux salles de bain, un WC",
+        "col_6": "Gîte pour 6 personnes;\nT4 composé de 3 chambres avec couchages modulaires (lits simples ou doubles sur demande), une cuisine tout équipée, un salon, deux salles de bain, un WC",
         "col_7": "picto.svg",
         "col_8": "Tout est inclus;\nLe linge de lit et les serviettes de toilettes sont fournis, ainsi que quelques produits de base pour votre première nuit",
         "col_9": "picto.svg",
@@ -170,7 +170,7 @@
         "actif": true
       },
       {
-        "label": "Cafetière",
+        "label": "Cafetière Senseo",
         "picto": "cafetiere",
         "alt": "",
         "ordre": "",
@@ -362,112 +362,112 @@
     "photos": [
       {
         "url": "https://lh3.googleusercontent.com/d/1rb5sJpDtGHdhS6cXj5cMH38G_miWkAd7",
-        "legende": "Chambre #1 avec deux lits simples (90 x 190 cm), convvertibles en lit double",
+        "legende": "Terrasse avec jardin privatif",
         "ordre": 1
       },
       {
         "url": "https://lh3.googleusercontent.com/d/1I3kqfB_zVoj7PO129AkDmi_pLj-kcjo5",
-        "legende": "Bureau chambre #1 avec vue sur le jardin",
+        "legende": "Terrasse avec jardin privatif",
         "ordre": 2
       },
       {
         "url": "https://lh3.googleusercontent.com/d/1MGlUijfMqhXyQFpyEZEOc0q5X8xBESB0",
-        "legende": "Chambre #2 avec lit double 140x200cm",
+        "legende": "Terrasse avec jardin privatif",
         "ordre": 3
       },
       {
         "url": "https://lh3.googleusercontent.com/d/1F6v-bI7c09ITWouh4IiEP6Pd2-zRwJKV",
-        "legende": "Chambre #2 avec rangement et entrée privative",
+        "legende": "Terrasse avec jardin privatif",
         "ordre": 4
       },
       {
         "url": "https://lh3.googleusercontent.com/d/1SvMA-U97LKQDoPOL9hVOanKZnms12-j_",
-        "legende": "Salle de bain chambre #2 avec douche à l'italienne",
+        "legende": "Terrasse avec jardin privatif",
         "ordre": 5
       },
       {
         "url": "https://lh3.googleusercontent.com/d/1ah3YILFcoWuYqHxgP4qD1t2DMkBDIenT",
-        "legende": "Chambre #3 avec deux lits simples (90 x 190 cm), convertibles en lit double",
+        "legende": "Terrasse avec jardin privatif",
         "ordre": 6
       },
       {
         "url": "https://lh3.googleusercontent.com/d/1W8Mo5Xqo0ewzmo7bOoMDw8QlFWiJ-LNm",
-        "legende": "Chambre #3 avec deux lits simples (90 x 190 cm), convertibles en lit double",
+        "legende": "Terrasse avec jardin privatif",
         "ordre": 7
       },
       {
         "url": "https://lh3.googleusercontent.com/d/1BtefZxmPQYXH40aWZvuDqmf1KiiRp0Pr",
-        "legende": "Tout le nécessaire pour des petits déjeuners en autonomie : cafetière à dosettes (Senseo ou Tassimi sur demande) et filtre, bouilloire, grille-pain...",
+        "legende": "Terrasse avec jardin privatif",
         "ordre": 8
       },
       {
         "url": "https://lh3.googleusercontent.com/d/10CxohUOkfYBiQI17-ACKx6p-Vq0E3B5w",
-        "legende": "Petit panier de bienvenue|d'essentiels à votre arrivée",
+        "legende": "Terrasse avec jardin privatif",
         "ordre": 9
       },
       {
         "url": "https://lh3.googleusercontent.com/d/12fJBeqIcl39roMm03519b4I6yfaDX6Bm",
-        "legende": "Huile, vinaige, épices et condiments pour cuisiner",
+        "legende": "Terrasse avec jardin privatif",
         "ordre": 10
       },
       {
         "url": "https://lh3.googleusercontent.com/d/1fFTshn8aqzYNLtgcj5vRNcxCKH-90W0L",
-        "legende": "Séjour lumineux avec télévision écran plat et canapé confortable",
+        "legende": "Terrasse avec jardin privatif",
         "ordre": 11
       },
       {
         "url": "https://lh3.googleusercontent.com/d/1CXnac5xrZDBQPxUzlXzI04odPGDVhCnJ",
-        "legende": "Wifi, télévision écran plat et canapé confortable",
+        "legende": "Terrasse avec jardin privatif",
         "ordre": 12
       },
       {
         "url": "https://lh3.googleusercontent.com/d/15qPaAoyjf0aNDhvy370qo2zUH8tXR_Cm",
-        "legende": "Séjour lumineux avec vue sur la Rhune et le jardin",
+        "legende": "Terrasse avec jardin privatif",
         "ordre": 13
       },
       {
         "url": "https://lh3.googleusercontent.com/d/1hMn01-2Yh3ST6I9-RcsKH35EfEODG6fb",
-        "legende": "Séjour lumineux avec vue sur la Rhune et le jardin. Passages de chats fréquents...",
+        "legende": "Terrasse avec jardin privatif",
         "ordre": 14
       },
       {
         "url": "https://lh3.googleusercontent.com/d/1emxggI_iRuyL6Uci_lI4AS05PGCeods4",
-        "legende": "Séjout avec vu",
+        "legende": "Terrasse avec jardin privatif",
         "ordre": 15
       },
       {
         "url": "https://lh3.googleusercontent.com/d/1sMMM-QNd038IhTWgSWtGGIB7V62x8uch",
-        "legende": "Lagunen Etxea : bienvenue !",
+        "legende": "Terrasse avec jardin privatif",
         "ordre": 16
       },
       {
         "url": "https://lh3.googleusercontent.com/d/1A6GxkiybwvAkOr1wSJncLxAf-8fO79JF",
-        "legende": "Salle de bain avec douche à l'italienne",
+        "legende": "Terrasse avec jardin privatif",
         "ordre": 17
       },
       {
         "url": "https://lh3.googleusercontent.com/d/1rxyrdlZZ_BlB2gJ9h4Z7gZkuvKhZHtlZ",
-        "legende": "Salle de bain avec rangement",
+        "legende": "Terrasse avec jardin privatif",
         "ordre": 18
       },
       {
         "url": "https://lh3.googleusercontent.com/d/1s33Fq-CPNBX8ixk8FzRijZtQrVcKpoV3",
-        "legende": "Salle de bain avec rangement",
+        "legende": "Terrasse avec jardin privatif",
         "ordre": 19
       },
       {
         "url": "https://lh3.googleusercontent.com/d/1NOAyhBdjODPID9_VIFfS_-cl4t75U52B",
-        "legende": "Terrasse avec jardin privatif, vue sur la Rhune",
+        "legende": "Terrasse avec jardin privatif",
         "ordre": 20
       },
       {
         "url": "https://lh3.googleusercontent.com/d/18d2q5Ve4cJG6IzSV0d6vs1ugLtvTQF3s",
-        "legende": "Terrasse avec jardin privatif, transats et mobilier de jardin",
+        "legende": "Terrasse avec jardin privatif",
         "ordre": 21
       },
       {
         "url": "https://lh3.googleusercontent.com/d/1i2nrkSiQECuKIqtew5rVht8CYDYd_GEo",
-        "legende": "Terrasse avec jardin privatif, transats et mobilier de jardin",
+        "legende": "Terrasse avec jardin privatif",
         "ordre": 22
       },
       {
@@ -477,7 +477,7 @@
       },
       {
         "url": "https://lh3.googleusercontent.com/d/1xCKaqL9Qxi_Iv77eSCnB6W0WCLk_MjYo",
-        "legende": "Terrasse avec jardin privatif et vue sur la Rhune",
+        "legende": "Terrasse avec jardin privatif",
         "ordre": 24
       }
     ],
@@ -512,6 +512,22 @@
         "texte": "Parfait. Emplacement très calme, bien situé pour les visites.",
         "date": "2025-06-01",
         "vote": 9,
+        "avis": ""
+      },
+      {
+        "auteur": "Emmanuelle",
+        "titre": "Séjour d'une semaine",
+        "texte": "Nous sommes ravis de notre séjour. Le logement était parfait pour notre groupe de 6 (deux parents, nos deux filles adolescentes avec une amie chacune). L'appartement est très agréable et fonctionnel. Nous avons adoré la terrasse, le jardin et la table de ping pong. Guillaume a été très accueillant et aidant, un grand merci à lui. Nous avons déjà envie de revenir.",
+        "date": "2025-08-01",
+        "vote": 10,
+        "avis": ""
+      },
+      {
+        "auteur": "Quentin",
+        "titre": "Superbe",
+        "texte": "Logement superbe, assez proche de tout que ce soit a pied ou en voiture!\nLa communication avec Guillaume etait impec! Je recommande vivement pour vos sejours a Hendaye et alentours!",
+        "date": "2025-10-01",
+        "vote": 10,
         "avis": ""
       }
     ],
@@ -578,7 +594,7 @@
           },
           {
             "question": "Quels sont les horaire d'arrivée et de départ ?",
-            "reponse": "Le gîte est disponible à partir de 16h et doit être laissé libre pour 11h. Ces horaires sont flexibles en fonction de l’occupation du gîte. Merci de nous communiquer votre horaire précis d'arrivée, afin de vous accueillir au mieux."
+            "reponse": "Le gîte est disponible à partir de 16h et doit être laissé libre pour 10h. Ces horaires sont flexibles en fonction de l’occupation du gîte. Merci de nous communiquer votre horaire précis d'arrivée, afin de vous accueillir au mieux."
           },
           {
             "question": "Puis-je arriver de façon autonome ?",
@@ -614,11 +630,11 @@
           },
           {
             "question": "Quels équipements sont mis à disposition ?",
-            "reponse": "Pour vous simplifier les vacances, le gîte est équipé d'un lave vaisselle, réfrigérateur, four, plaques à induction, micro ondes, cafetière à mono dose et cafetière à filtre, grille pain. Mais également d'un lave linge, étendoirs, télévision, lecteur dvd, sèche cheveux, fer et table à repasser, matériel de ménage. Un barbecue est à votre disposition. La cuisine est bien équipée en ustensiles et en vaisselle pour vous permettre de cuisiner à volonté. Le gîte est équipé de chauffages électriques récents et entretenus."
+            "reponse": "Pour vous simplifier les vacances, le gîte est équipé d'un lave vaisselle, réfrigérateur, four, plaques à induction, micro ondes, cafetière à mono dose Senseo et cafetière à filtre, grille pain. Mais également d'un lave linge, étendoirs, télévision, sèche cheveux, fer et table à repasser, matériel de ménage. La cuisine est bien équipée en ustensiles et en vaisselle pour vous permettre de cuisiner à volonté. Le gîte est équipé de chauffages électriques récents et entretenus."
           },
           {
             "question": "Le gîte est-il adapté aux enfants ?",
-            "reponse": "Absolument ! Le jardin est idéal pour les parties de foot. La table familiale, le lave linge et les différents espaces sont pensés pour des vacances en famille.\nLa terrasse est clôturée pour plus de sécurité mais votre surveillance dans le jardin reste nécessaire.\nPour les jeunes enfants, nous mettons à votre disposition une chaise haute, une baignoire bébé et un lit parapluie sur demande.\nPensez à apporter leurs draps et doudous."
+            "reponse": "Absolument ! Le jardin est idéal pour les parties de foot ou de ping pong. La table de jardin, le lave linge et les différents espaces sont pensés pour des vacances en famille.\nLa terrasse est clôturée pour plus de sécurité mais votre surveillance dans le jardin reste nécessaire.\nPour les jeunes enfants, nous mettons à votre disposition une chaise haute, une baignoire bébé et un lit parapluie sur demande.\nPensez à apporter leurs draps et doudous."
           }
         ]
       }
