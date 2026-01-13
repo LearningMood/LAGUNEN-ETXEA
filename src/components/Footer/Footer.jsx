@@ -14,19 +14,19 @@ export default function Footer({ data = {} }) {
     return (
         <footer id="contact" className="bottom">
             <div className="line line--center line--start">
-                <h2>Pour nous contacter :</h2>
+                <h2>Pour contacter {contact || "nous" }:</h2>
 
 
                 {mailHref && (
-                    <p className="border--tiret"><a href={mailHref} aria-label={`Écrire à ${contact || "nous"}`} target="_blank">
-                        Écrire à {contact || email}
-                    </a></p>
+                    <a href={mailHref} className="hyperlien" aria-label={`Contacter ${contact || "nous" } par mail à ${email}`} target="_blank">
+                        {email}
+                    </a>
                 )}
 
                 {telHref && (
-                    <p className="border--tiret"><a href={telHref} aria-label={`Appeler ${telephone}`}>
+                    <a href={telHref} className="hyperlien" aria-label={`Appeler ${telephone}`}>
                         {telephone}
-                    </a></p>
+                    </a>
                 )}
 
                 {adresse && <p>{adresse}</p>}
