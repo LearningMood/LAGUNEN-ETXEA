@@ -1,5 +1,5 @@
 @use 'vars' as v;
-@import 'mixins';
+@use 'mixins' as *;
 
 .mosaique {
   display: grid;

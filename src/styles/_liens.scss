@@ -1,3 +1,4 @@
+@use "sass:color";
 @use 'vars' as v;
 
 a {
@@ -28,10 +29,10 @@ a.btn-dark {
     -o-transition: all .3s ease-in;
     &:hover
         {
-        background-color: darken(v.$darkblue, 10%);
+        background: color.scale(v.$darkblue, $lightness: -10%)
     }
 }
 
 a.btn-dark--alt {
-    background: lighten(v.$darkblue, 20%);
+    background: color.scale(v.$darkblue, $lightness: 20%)
 }

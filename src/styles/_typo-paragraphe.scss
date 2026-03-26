@@ -1,5 +1,6 @@
+@use "sass:color";
 @use 'vars' as v;
-@import 'mixins';
+@use 'mixins' as *;
 
 p, ul, ul li {
     color: v.$dark;
@@ -54,22 +55,51 @@ ul.questions {
 
     li {
         margin-bottom: 2rem;
+        border-bottom: 1px dashed v.$carmin;
     }
 
     .questions_intitule {
+        position: relative;
         font-size: 1.3rem;
         font-weight: normal;
         color: v.$carmin;
         font-family: v.$titre;
+        cursor: pointer;
+        user-select: none;
+
+        &::after {
+            content: " +";
+            position: absolute;
+            right: 0;
+            font-size: 2rem;
+        }
+        .is-open &::after {
+            content: " −";
+        }
     }
 
     @media(min-width: v.breakpoint(md)) {
         p.questions_reponse {
-            margin-left: 2rem;
+            margin-bottom: 2rem;
         }
 
     }
 
+}
+
+.questions_reponse-wrapper {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.35s ease;
+  
+  .questions_reponse {
+    overflow: hidden;
+    margin: 0;
+  }
+}
+
+.is-open .questions_reponse-wrapper {
+  grid-template-rows: 1fr;
 }
 
 // CONTACT
@@ -79,6 +109,6 @@ ul.contact-list {
 
     a {
         color: v.$basque;
-        text-decoration: underline dotted lighten(v.$basque, 20%);
+        text-decoration: underline dotted color.scale(v.$basque, $lightness: 20%);
     }
 }

@@ -1,7 +1,10 @@
 import ParagrapheCenter from "../Layout/ParagrapheCenter";
 import Section from "../Layout/Section";
 import TitreSection from "../Layout/TitreSection";
-import Slider from "react-slick";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/pagination';
 
 
 function formatDateFR(value) {
@@ -68,38 +71,33 @@ export default function Avis({ header, items = [] }) {
       <TitreSection titre={titre} />
       {description && <ParagrapheCenter texte={description} />}
 
-      <Slider {...settings}>
-        {slides.map((av, i) => (
-          <blockquote key={i} className="avis-slide">
-            {av.titre && <h3 className="titre--avis">{av.titre}</h3>}
-            <p className="txt--avis">“{av.texte}”</p>
-            <footer>
-              <Stars n={av.vote} />
-              <span> • </span>
-              <span>{av.auteur}</span>
-              {av.date && <>
-                <span> • </span>
-                <time dateTime={av.date} className="txt-capitalize">{av.date}</time>
-              </>}
-            </footer>
-          </blockquote>
-        ))}
-      </Slider>
+      <Swiper
+  modules={[Autoplay, Pagination]}
+  autoplay={{ delay: 5000 }}
+  pagination={{ clickable: true }}
+  loop={true}
+  spaceBetween={30}
+>
+  {slides.map((av, i) => (
+    <SwiperSlide key={i}>
+      <blockquote className="avis-slide">
+        {av.titre && <h3 className="titre--avis">{av.titre}</h3>}
+        <p className="txt--avis">"{av.texte}"</p>
+        <footer>
+          <Stars n={av.vote} />
+          <span> • </span>
+          <span>{av.auteur}</span>
+          {av.date && <>
+            <span> • </span>
+            <time dateTime={av.date} className="txt-capitalize">{av.date}</time>
+          </>}
+        </footer>
+      </blockquote>
+    </SwiperSlide>
+  ))}
+</Swiper>
+
+
     </Section>
   );
 }
-
-
-    // return (
-    //     <Section id="avis">
-    //         <TitreSection titre={header.titre} />
-    //         <p className="txt-center txt--lead">{header.description}</p> {/* Assure-toi d'afficher la description */}
-    //         {processedAvis.length > 0 ? (
-    //         <Slider {...settings}>
-    //             {processedAvis.map((avisItem, index) => (
-    //             <blockquote key={index} className="avis-slide">
-    //                 <p className="description">{avisItem.description_avis}</p>
-    //                 <p className="auteur">- {avisItem.description_auteur}</p>
-    //             </blockquote>
-    //             ))}
-    //         </Slider>

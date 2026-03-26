@@ -1,3 +1,4 @@
+@use "sass:color";
 @use 'vars' as v;
 
 nav {
@@ -19,7 +20,7 @@ ul.main-nav {
     li {
         list-style: none;
         cursor: pointer;
-        color: lighten(v.$basque, 50%);
+        color: color.scale(v.$color, $lightness: 50%);
         transition: all .3s ease-in;
         -webkit-transition: all .3s ease-in;
         -moz-transition: all .3s ease-in;
@@ -44,7 +45,7 @@ nav.sticky {
     transform: translateY(0);
 
     ul li {
-        color: lighten(v.$dark, 40%);
+        color: color.scale(v.$color, $lightness: 40%);
     }
 }
 

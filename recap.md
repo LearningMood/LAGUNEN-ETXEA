@@ -1,3 +1,8 @@
+MAJ 26/03/2026
+npm run dev
+npm run predeploy
+npm run deploy
+
 // ================================================
 // 🏗️ ARCHITECTURE COMPLÈTE DU PROJET
 // ================================================

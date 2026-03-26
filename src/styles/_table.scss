@@ -1,3 +1,4 @@
+@use "sass:color";
 @use 'vars' as v;
 
 .tableau-tarifs {
@@ -21,12 +22,12 @@ table td {
 tr,
 td,
 th {
-    border: solid 1px lighten(v.$color, 40%);
+    border: solid 1px color.scale(v.$color, $lightness: 80%);
     padding: 1rem 1rem;
 }
 
 th {
-    background-color: lighten(v.$color, 30%);
+    background-color: color.scale(v.$color, $lightness: 30%);
     color: #fff;
     font-family: v.$titre;
 }

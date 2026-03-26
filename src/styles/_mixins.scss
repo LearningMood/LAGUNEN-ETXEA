@@ -1,3 +1,4 @@
+@use "sass:color";
 @use 'vars' as v;
 
 // Pour  les classes flex
@@ -58,10 +59,10 @@
       $pourcentage: $i*1%;
 
       .darker-#{$i} {
-        background-color: darken(v.$color, $pourcentage);
+        background-color: color.scale(v.$color, $lightness: $pourcentage);
       }
       .lighter-#{$i} {
-        background-color: lighten(v.$color, $pourcentage);
+        background-color: color.scale(v.$color, $lightness: $pourcentage);
       }
     }
   }
